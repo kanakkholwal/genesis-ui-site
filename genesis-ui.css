@@ -5189,7 +5189,7 @@ html ::-webkit-scrollbar-track {
 @media screen and (max-width: 576px) {
   .G_Footer {
     padding: 0.5rem;
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -5634,10 +5634,51 @@ html ::-webkit-scrollbar-track {
 .G_TabBar {
   display: flex;
   flex-direction: row;
-  margin-bottom: 0.75rem;
+  margin-block: 0.75rem;
 }
 .G_TabBar.Vertical {
   flex-direction: column;
+  margin-inline: 0.75rem;
+  margin-block: 0;
+}
+.G_TabBar.Fill .G_TabToggle {
+  flex: 1 1 auto;
+  text-align: center;
+}
+.G_TabBar.Justify .G_TabToggle {
+  flex-basis: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+.G_TabBar.G_Tabs .G_TabToggle {
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 0.1875rem;
+  border-color: rgba(0, 0, 0, 0);
+  background: none;
+  color: #a4acff;
+}
+.G_TabBar.G_Tabs .G_TabToggle.isActive {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-color: rgba(107, 117, 219, 0.2);
+  background: rgba(107, 117, 219, 0.2) !important;
+}
+.G_TabBar.G_Pills .G_TabToggle {
+  margin: 0.25rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 0.1875rem;
+  border: 0.1875rem solid rgba(107, 117, 219, 0.2);
+  box-shadow: none;
+  background: none;
+  color: #a4acff;
+  transition: all 150ms ease-in-out;
+}
+.G_TabBar.G_Pills .G_TabToggle.isActive {
+  background: rgba(107, 117, 219, 0.2) !important;
+  border-color: rgba(0, 0, 0, 0);
 }
 
 .G_TabToggle {
@@ -5648,19 +5689,9 @@ html ::-webkit-scrollbar-track {
   font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
-  padding: calc(0.625rem - 3px) calc(1.5rem - 3px) calc(0.5rem - 2px);
   margin: 0.25rem;
-  cursor: pointer;
-  border-radius: 0.25rem;
-  border: 3px solid rgba(107, 117, 219, 0.2);
-  box-shadow: none;
-  background: none;
-  color: #a4acff;
-}
-.G_TabToggle.isActive {
-  background: rgba(107, 117, 219, 0.2) !important;
-  border: 0;
-  padding: 0.625rem 1.5rem 0.5rem;
+  user-select: none;
+  padding: 0.4375rem 1.3125rem;
 }
 
 .G_TabContent {
@@ -5668,8 +5699,21 @@ html ::-webkit-scrollbar-track {
 }
 .G_TabContent.isOpen {
   display: block;
+  animation: TabShow 250ms ease;
 }
 
+@keyframes TabShow {
+  from {
+    transform: translate3d(0, 10px, 0);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
 body {
   background-color: #23272f;
   font-weight: 400;
