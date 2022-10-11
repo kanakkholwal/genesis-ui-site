@@ -1,0 +1,45 @@
+@use "../variables";
+@use "../buttons";
+
+.G_TabBar {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.75rem;
+
+    &.Vertical {
+        flex-direction: column;
+    }
+}
+
+.G_TabToggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: calc(.625rem - 3px) calc(1.5rem - 3px) calc(.5rem - 2px);
+    margin: 0.25rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    border: 3px solid variables.$secondaryBg;
+    box-shadow: none;
+    background: none;
+    color: variables.$secondary;
+
+    &.isActive {
+        background: variables.$secondaryBg !important;
+        border: 0;
+        padding: .625rem 1.5rem .5rem;
+
+    }
+}
+
+.G_TabContent {
+    display: none;
+
+    &.isOpen {
+        display: block;
+    }
+}
