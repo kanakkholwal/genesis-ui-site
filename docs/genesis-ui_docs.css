@@ -49,4 +49,24 @@
 }
 .Example_section .CodeBlock .CodeBlock_Body > pre {
   margin: 1rem 0.75rem;
+  position: relative;
+}
+.Example_section .CodeBlock .CodeBlock_Body > pre .Copyify {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 99;
+  border-radius: 0.27rem;
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-transform: capitalize;
+  background: rgba(107, 117, 219, 0.2);
+  color: #a4acff;
 }/*# sourceMappingURL=genesis-ui_docs.css.map */
