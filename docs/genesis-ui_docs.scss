@@ -20,6 +20,11 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .G_Card {
+            max-width: 22rem;
+        }
     }
 
     .CodeBlock {
@@ -46,7 +51,8 @@
             width: inherit;
             vertical-align: bottom;
             border-top: 1px solid #374151;
-            &> pre{
+
+            &>pre {
                 margin: 1rem .75rem;
 
             }

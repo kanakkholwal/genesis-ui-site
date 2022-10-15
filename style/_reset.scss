@@ -168,6 +168,7 @@ h6 {
     color: variables.$bodyText;
     margin-bottom: 0.75rem;
     font-family: variables.$fontHeading;
+    margin-left: 0.25rem
 }
 
 h1 {
@@ -201,11 +202,12 @@ h6 {
 
 p {
     font-family: variables.$fontPara;
-    font-size: 18px;
-    line-height: 30px;
-    margin-bottom: 16px;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    margin-bottom: 1rem;
     font-weight: 400;
     color: #d4d4d4;
+    margin-left: 0.5rem
 }
 
 hr {
@@ -228,14 +230,67 @@ hr {
 :not(pre)>code:not([class]) {
     display: inline;
     padding: 5px;
-    font-size: 14px;
+    font-size: 0.875rem;
     border-radius: 3px;
     line-height: inherit;
     color: #a6b4c3;
     background: #1e2739;
     letter-spacing: 1px;
+    border: 1px dashed variables.$borderColor;
     font-weight: 500;
     font-family: variables.$fontCode
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+// utilities
+.Img-Fluid,
+.Img-Thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
+.Img-Thumbnail {
+    padding: 0.25rem;
+    background-color: variables.$cardBg;
+    border: 1px solid variables.$borderColor;
+    border-radius: 0.25rem;
+}
+
+.bgImage {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.hoverOverlay .Mask {
+    opacity: 0;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.Mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-attachment: fixed;
+    user-select: none;
+    -webkit-user-drag: none;
+
+
 }
 
 .G_Backdrop {

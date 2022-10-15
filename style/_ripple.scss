@@ -2,12 +2,17 @@
 
 .ripple {
     cursor: pointer;
-    overflow: hidden;
+    user-select: none;
     position: relative;
     --ripple-opacity: 0.45;
     --ripple-duration: 1s;
     --ripple-easing: cubic-bezier(0, 0, 0.15, 1);
     --ripple-background: rgba(255, 255, 255, 0.5);
+
+    &:has(>.ripple-effect) {
+        overflow: hidden;
+
+    }
 
     .ripple-effect {
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buttons | Docs - Genesis UI</title>
+    <title>Badges | Docs - Genesis UI</title>
     <link href="/genesis-ui.css" rel="stylesheet" />
     <link href="/content/fonts/all.min.css" rel="stylesheet" />
     <link href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
@@ -156,30 +156,19 @@
             </div>
         </nav>
         <header class="G_Header">
-            <h1 class="title"> Buttons </h1>
-            <h5 class="description"> Responsive Buttons built with Multiple predefined button style classes: button
-                link, outline, round button, floating & more </h5>
+            <h1 class="title"> Badges </h1>
+            <h5 class="description"> Responsive Badges add extra information like count or label to any content. Use
+                counters, icons, or labels. </h5>
         </header>
         <main class="G_MainContent" id="demo">
-            <section class="Section" id="Hierarchy">
-                <h2>Hierarchy</h2>
-                <p>Buttons, as one of the key UI elements, must have their own hierarchy. This means that the user
-                    should be able to easily identify which button is the most important (primary button), which is less
-                    important (secondary button) and which presents completely additional information (tertiary button).
-                </p>
-                <p> Elements with strong, filled backgrounds and shadows attract attention the most, which is why
-                    <strong> button primary</strong> default buttons is built in this way. </p>
-                <p> A delicate background without shadows is less engaging, so it is well suited for <strong> button
-                        secondary.</strong>
-                </p>
-                <p> The lack of background and shadow makes the element the least visible. These features characterize
-                    the <strong> button tertiary.</strong>
-                </p>
+            <section class="Section" id="Basic_example">
+                <h2>Basic example </h2>
+                <p> Use <code>.Badge</code> class to provide your visitors with highlighted, new or unread items by
+                    adding it to links, text navs, and more. </p>
                 <div class="Example_section">
                     <div class="Example">
-                        <button class=" btn  btn-primary">Primary</button>
-                        <button class=" btn  btn-primary btn-h2">Secondary Level</button>
-                        <button class=" btn  btn-primary btn-h3">Tertiary Level</button>
+                        <h2>Example heading <span class="Badge"> New </span>
+                        </h2>
                     </div>
                     <div class="CodeBlock">
                         <div class="CodeBlock_Header">
@@ -191,29 +180,34 @@
                         <div class="CodeBlock_Body" id="Code_1">
                             <pre>
 												<code class="language-html  line-numbers">
-    &lt;button class=&quot; btn  btn-primary&quot;&gt;Primary&lt;/button&gt;
-    &lt;button class=&quot; btn  btn-primary btn-h2&quot;&gt;Secondary Level&lt;/button&gt;
-    &lt;button class=&quot; btn  btn-primary btn-h3&quot;&gt;Tertiary Level&lt;/button&gt;
+                                    &lt;h2&gt;Example heading &lt;span class=&quot;Badge&quot;&gt;New&lt;/span&gt;&lt;/h2&gt;
+
                           </code>
 											</pre>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="Section" id="Contextual">
-                <h2>Contextual</h2>
-                <p>
-                    <strong>Genesis UI </strong> includes several predefined button styles, each serving its own
-                    semantic purpose.
-                </p>
+            <section class="Section" id="Sizes">
+                <h2>Sizes</h2>
+                <p>Badges scale to match the size of the immediate parent element by using relative font sizing and em
+                    units. </p>
                 <div class="Example_section">
-                    <div class="Example">
-                        <button class=" btn  btn-primary">Primary</button>
-                        <button class=" btn  btn-secondary">Secondary</button>
-                        <button class=" btn  btn-info">Info</button>
-                        <button class=" btn  btn-warning">Warning</button>
-                        <button class=" btn  btn-danger">Danger</button>
-                        <button class=" btn  btn-success">Success</button>
+                    <div class="Example  text-start">
+                        <div>
+                            <h1>Example heading <span class="Badge">New</span>
+                            </h1>
+                            <h2>Example heading <span class="Badge">New</span>
+                            </h2>
+                            <h3>Example heading <span class="Badge">New</span>
+                            </h3>
+                            <h4>Example heading <span class="Badge">New</span>
+                            </h4>
+                            <h5>Example heading <span class="Badge">New</span>
+                            </h5>
+                            <h6>Example heading <span class="Badge">New</span>
+                            </h6>
+                        </div>
                     </div>
                     <div class="CodeBlock">
                         <div class="CodeBlock_Header">
@@ -225,29 +219,26 @@
                         <div class="CodeBlock_Body" id="Code_2">
                             <pre>
 												<code class="language-html  line-numbers">
-                                    &lt;button class=&quot; btn  btn-primary&quot;&gt;Primary&lt;/button&gt;
-                                    &lt;button class=&quot; btn  btn-secondary&quot;&gt;Secondary&lt;/button&gt;
-                                    &lt;button class=&quot; btn  btn-info&quot;&gt;Info&lt;/button&gt;
-                                    &lt;button class=&quot; btn  btn-warning&quot;&gt;Warning&lt;/button&gt;
-                                    &lt;button class=&quot; btn  btn-danger&quot;&gt;Danger&lt;/button&gt;
-                                    &lt;button class=&quot; btn  btn-success&quot;&gt;Success&lt;/button&gt;
-                                    &lt;button class=&quot; btn  btn-dark&quot;&gt;Dark&lt;/button&gt;
-                                    &lt;button class=&quot; btn  btn-light&quot;&gt;Light&lt;/button&gt;
+                                    &lt;h1&gt;Example heading &lt;span class=&quot;Badge&quot;&gt;New&lt;/span&gt;&lt;/h1&gt;
+                                    &lt;h2&gt;Example heading &lt;span class=&quot;Badge&quot;&gt;New&lt;/span&gt;&lt;/h2&gt;
+                                    &lt;h3&gt;Example heading &lt;span class=&quot;Badge&quot;&gt;New&lt;/span&gt;&lt;/h3&gt;
+                                    &lt;h4&gt;Example heading &lt;span class=&quot;Badge&quot;&gt;New&lt;/span&gt;&lt;/h4&gt;
+                                    &lt;h5&gt;Example heading &lt;span class=&quot;Badge&quot;&gt;New&lt;/span&gt;&lt;/h5&gt;
+                                    &lt;h6&gt;Example heading &lt;span class=&quot;Badge&quot;&gt;New&lt;/span&gt;&lt;/h6&gt;
                           </code>
 											</pre>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="Section" id="Neutral">
-                <h2>Neutral</h2>
-                <p>
-                    <strong>Genesis UI </strong> provide additional light and dark colors as Neutral Buttons.
-                </p>
+            <section class="Section" id="Button">
+                <h2>Button</h2>
+                <p>Badges can be used as part of links or buttons to provide a counter. </p>
                 <div class="Example_section">
                     <div class="Example">
-                        <button class=" btn  btn-dark">Dark</button>
-                        <button class=" btn  btn-light">Light</button>
+                        <button type="button" class="btn btn-primary"> Notifications <span
+                                class="Badge Badge_danger">8</span>
+                        </button>
                     </div>
                     <div class="CodeBlock">
                         <div class="CodeBlock_Header">
@@ -259,30 +250,29 @@
                         <div class="CodeBlock_Body" id="Code_3">
                             <pre>
 												<code class="language-html  line-numbers">
-                                    &lt;button class=&quot; btn  btn-dark&quot;&gt;Dark&lt;/button&gt;
-                                    &lt;button class=&quot; btn  btn-light&quot;&gt;Light&lt;/button&gt;
+                                    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;
+                                    Notifications&lt;span class=&quot;Badge Badge_danger&quot;&gt;8&lt;/span&gt;
+                                &lt;/button&gt;
+    
                           </code>
 											</pre>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="Section" id="Outline">
-                <h2>Outline</h2>
-                <p>
-                    <strong>Genesis UI </strong> provide buttons when need not the hefty background colors as Outline
-                    Buttons.
-                </p>
+            <section class="Section" id="Colors">
+                <h2>Colors</h2>
+                <p>Use our badge color classes to quickly change the appearance of a badge. </p>
                 <div class="Example_section">
                     <div class="Example">
-                        <button class="btn  btn-outline-primary">Primary</button>
-                        <button class="btn   btn-outline-secondary">Secondary</button>
-                        <button class="btn   btn-outline-info">Info</button>
-                        <button class="btn   btn-outline-warning">Warning</button>
-                        <button class="btn   btn-outline-danger">Danger</button>
-                        <button class="btn   btn-outline-success">Success</button>
-                        <button class="btn   btn-outline-dark">Dark</button>
-                        <button class="btn   btn-outline-light">Light</button>
+                        <span class="Badge Badge_primary">Primary</span>
+                        <span class="Badge Badge_secondary">Secondary</span>
+                        <span class="Badge Badge_success">Success</span>
+                        <span class="Badge Badge_danger">Danger</span>
+                        <span class="Badge Badge_warning">Warning</span>
+                        <span class="Badge Badge_info">Info</span>
+                        <span class="Badge Badge_light">Light</span>
+                        <span class="Badge Badge_dark">Dark</span>
                     </div>
                     <div class="CodeBlock">
                         <div class="CodeBlock_Header">
@@ -294,33 +284,33 @@
                         <div class="CodeBlock_Body" id="Code_4">
                             <pre>
 												<code class="language-html  line-numbers">
-                                    &lt;button class=&quot;btn  btn-outline-primary&quot;&gt;Primary&lt;/button&gt;
-                                    &lt;button class=&quot;btn   btn-outline-secondary&quot;&gt;Secondary&lt;/button&gt;
-                                    &lt;button class=&quot;btn   btn-outline-info&quot;&gt;Info&lt;/button&gt;
-                                    &lt;button class=&quot;btn   btn-outline-warning&quot;&gt;Warning&lt;/button&gt;
-                                    &lt;button class=&quot;btn   btn-outline-danger&quot;&gt;Danger&lt;/button&gt;
-                                    &lt;button class=&quot;btn   btn-outline-success&quot;&gt;Success&lt;/button&gt;
-                                    &lt;button class=&quot;btn   btn-outline-dark&quot;&gt;Dark&lt;/button&gt;
-                                    &lt;button class=&quot;btn   btn-outline-light&quot;&gt;Light&lt;/button&gt;
+                                    &lt;span class=&quot;Badge Badge_primary&quot;&gt;Primary&lt;/span&gt;
+                                    &lt;span class=&quot;Badge Badge_secondary&quot;&gt;Secondary&lt;/span&gt;
+                                    &lt;span class=&quot;Badge Badge_success&quot;&gt;Success&lt;/span&gt;
+                                    &lt;span class=&quot;Badge Badge_danger&quot;&gt;Danger&lt;/span&gt;
+                                    &lt;span class=&quot;Badge Badge_warning&quot;&gt;Warning&lt;/span&gt;
+                                    &lt;span class=&quot;Badge Badge_info&quot;&gt;Info&lt;/span&gt;
+                                    &lt;span class=&quot;Badge Badge_light&quot;&gt;Light&lt;/span&gt;
+                                    &lt;span class=&quot;Badge Badge_dark&quot;&gt;Dark&lt;/span&gt;
                           </code>
 											</pre>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="Section" id="Rounded">
-                <h2>Rounded </h2>
-                <p> Add <code>.btn-rounded</code> class to make the button rounded. </p>
+            <section class="Section" id="Pilled">
+                <h2>Pilled </h2>
+                <p> Add <code>.pilled</code> class to make badges more rounded with a larger border-radius </p>
                 <div class="Example_section">
                     <div class="Example">
-                        <button class="btn btn-rounded btn-primary ">Primary</button>
-                        <button class="btn btn-rounded  btn-secondary">Secondary</button>
-                        <button class="btn btn-rounded  btn-info">Info</button>
-                        <button class="btn btn-rounded  btn-warning">Warning</button>
-                        <button class="btn btn-rounded  btn-danger">Danger</button>
-                        <button class="btn btn-rounded  btn-success">Success</button>
-                        <button class="btn btn-rounded  btn-dark">Dark</button>
-                        <button class="btn btn-rounded  btn-light">Light</button>
+                        <span class="Badge Badge_primary pilled">Primary</span>
+                        <span class="Badge Badge_secondary pilled">Secondary</span>
+                        <span class="Badge Badge_success pilled">Success</span>
+                        <span class="Badge Badge_danger pilled">Danger</span>
+                        <span class="Badge Badge_warning pilled">Warning</span>
+                        <span class="Badge Badge_info pilled">Info</span>
+                        <span class="Badge Badge_light pilled">Light</span>
+                        <span class="Badge Badge_dark pilled">Dark</span>
                     </div>
                     <div class="CodeBlock">
                         <div class="CodeBlock_Header">
@@ -332,34 +322,61 @@
                         <div class="CodeBlock_Body" id="Code_5">
                             <pre>
 												<code class="language-html  line-numbers">
-                                    &lt;button class=&quot;btn btn-rounded btn-primary &quot;&gt;Primary&lt;/button&gt;
-                                    &lt;button class=&quot;btn btn-rounded  btn-secondary&quot;&gt;Secondary&lt;/button&gt;
-                                    &lt;button class=&quot;btn btn-rounded  btn-info&quot;&gt;Info&lt;/button&gt;
-                                    &lt;button class=&quot;btn btn-rounded  btn-warning&quot;&gt;Warning&lt;/button&gt;
-                                    &lt;button class=&quot;btn btn-rounded  btn-danger&quot;&gt;Danger&lt;/button&gt;
-                                    &lt;button class=&quot;btn btn-rounded  btn-success&quot;&gt;Success&lt;/button&gt;
-                                    &lt;button class=&quot;btn btn-rounded  btn-dark&quot;&gt;Dark&lt;/button&gt;
-                                    &lt;button class=&quot;btn btn-rounded  btn-light&quot;&gt;Light&lt;/button&gt;
+                                    &lt;span class=&quot;Badge Badge_primary pilled&quot;&gt;Primary&lt;/span&gt;
+                                    &lt;span class=&quot;Badge Badge_secondary pilled&quot;&gt;Secondary&lt;/span&gt;
+                                    &lt;span class=&quot;Badge Badge_success pilled&quot;&gt;Success&lt;/span&gt;
+                                    &lt;span class=&quot;Badge Badge_danger pilled&quot;&gt;Danger&lt;/span&gt;
+                                    &lt;span class=&quot;Badge Badge_warning pilled&quot;&gt;Warning&lt;/span&gt;
+                                    &lt;span class=&quot;Badge Badge_info pilled&quot;&gt;Info&lt;/span&gt;
+                                    &lt;span class=&quot;Badge Badge_light pilled&quot;&gt;Light&lt;/span&gt;
+                                    &lt;span class=&quot;Badge Badge_dark pilled&quot;&gt;Dark&lt;/span&gt;
                           </code>
 											</pre>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="Section" id="Rounded_outline">
-                <h2>Rounded outline </h2>
-                <p> You can use <code>.btn-outline-*</code> and <code>.btn-rounded</code> together to make the button
-                    outline and rounded at the same time. </p>
+            <section class="Section" id="Positioned">
+                <h2>Positioned </h2>
+                <p> Add <code>.Badge_positioned</code> class to parent element of the badge and adjust badge position
+                    using classes like : <span></span>
+                    <code>.TopLeft</code>
+                    <code>.TopCenter</code>
+                    <code>.TopRight</code>
+                    <code>.BottomLeft</code>
+                    <code>.BottomCenter</code>
+                    <code>.BottomRight</code>
+                    <code>.LeftCenter</code>
+                    <code>.RightCenter</code> .
+                </p>
                 <div class="Example_section">
                     <div class="Example">
-                        <button class="btn btn-rounded btn-outline-primary ">Primary</button>
-                        <button class="btn btn-rounded  btn-outline-secondary">Secondary</button>
-                        <button class="btn btn-rounded  btn-outline-info">Info</button>
-                        <button class="btn btn-rounded  btn-outline-warning">Warning</button>
-                        <button class="btn btn-rounded  btn-outline-danger">Danger</button>
-                        <button class="btn btn-rounded  btn-outline-success">Success</button>
-                        <button class="btn btn-rounded  btn-outline-dark">Dark</button>
-                        <button class="btn btn-rounded  btn-outline-light">Light</button>
+                        <button type="button" class="btn btn-primary Badge_positioned"> TopLeft <span
+                                class="Badge Badge_danger TopLeft">8</span>
+                        </button>
+                        <button type="button" class="btn btn-primary Badge_positioned"> TopCenter <span
+                                class="Badge Badge_danger TopCenter">8</span>
+                        </button>
+                        <button type="button" class="btn btn-primary Badge_positioned"> TopRight <span
+                                class="Badge Badge_danger TopRight">8</span>
+                        </button>
+                        <hr>
+                        <button type="button" class="btn btn-primary Badge_positioned"> BottomLeft <span
+                                class="Badge Badge_danger BottomLeft">8</span>
+                        </button>
+                        <button type="button" class="btn btn-primary Badge_positioned"> BottomCenter <span
+                                class="Badge Badge_danger BottomCenter">8</span>
+                        </button>
+                        <button type="button" class="btn btn-primary Badge_positioned"> BottomRight <span
+                                class="Badge Badge_danger BottomRight">8</span>
+                        </button>
+                        <hr>
+                        <button type="button" class="btn btn-primary Badge_positioned"> LeftCenter <span
+                                class="Badge Badge_danger LeftCenter">8</span>
+                        </button>
+                        <button type="button" class="btn btn-primary Badge_positioned"> RightCenter <span
+                                class="Badge Badge_danger RightCenter">8</span>
+                        </button>
                     </div>
                     <div class="CodeBlock">
                         <div class="CodeBlock_Header">
@@ -370,41 +387,62 @@
                         </div>
                         <div class="CodeBlock_Body" id="Code_6">
                             <pre>
-												<code class="language-html  line-numbers">
-                                    &lt;button class=&quot;btn btn-rounded btn-outline-primary &quot;&gt;Primary&lt;/button&gt;
-                                    &lt;button class=&quot;btn btn-rounded  btn-outline-secondary&quot;&gt;Secondary&lt;/button&gt;
-                                    &lt;button class=&quot;btn btn-rounded  btn-outline-info&quot;&gt;Info&lt;/button&gt;
-                                    &lt;button class=&quot;btn btn-rounded  btn-outline-warning&quot;&gt;Warning&lt;/button&gt;
-                                    &lt;button class=&quot;btn btn-rounded  btn-outline-danger&quot;&gt;Danger&lt;/button&gt;
-                                    &lt;button class=&quot;btn btn-rounded  btn-outline-success&quot;&gt;Success&lt;/button&gt;
-                                    &lt;button class=&quot;btn btn-rounded  btn-outline-dark&quot;&gt;Dark&lt;/button&gt;
-                                    &lt;button class=&quot;btn btn-rounded  btn-outline-light&quot;&gt;Light&lt;/button&gt;
+														<code class="language-html  line-numbers">
+                                    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary Badge_positioned&quot;&gt;
+                                    TopLeft&lt;span class=&quot;Badge Badge_danger TopLeft&quot;&gt;8&lt;/span&gt;
+                                &lt;/button&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary Badge_positioned&quot;&gt;
+                                    TopCenter&lt;span class=&quot;Badge Badge_danger TopCenter&quot;&gt;8&lt;/span&gt;
+                                &lt;/button&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary Badge_positioned&quot;&gt;
+                                    TopRight&lt;span class=&quot;Badge Badge_danger TopRight&quot;&gt;8&lt;/span&gt;
+                                &lt;/button&gt;
+          
+                                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary Badge_positioned&quot;&gt;
+                                    BottomLeft&lt;span class=&quot;Badge Badge_danger BottomLeft&quot;&gt;8&lt;/span&gt;
+                                &lt;/button&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary Badge_positioned&quot;&gt;
+                                    BottomCenter&lt;span class=&quot;Badge Badge_danger BottomCenter&quot;&gt;8&lt;/span&gt;
+                                &lt;/button&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary Badge_positioned&quot;&gt;
+                                    BottomRight&lt;span class=&quot;Badge Badge_danger BottomRight&quot;&gt;8&lt;/span&gt;
+                                &lt;/button&gt;
+                          
+                                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary Badge_positioned&quot;&gt;
+                                    LeftCenter&lt;span class=&quot;Badge Badge_danger LeftCenter&quot;&gt;8&lt;/span&gt;
+                                &lt;/button&gt;
+                                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary Badge_positioned&quot;&gt;
+                                    RightCenter&lt;span class=&quot;Badge Badge_danger RightCenter&quot;&gt;8&lt;/span&gt;
+                                &lt;/button&gt;
                           </code>
-											</pre>
+													</pre>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="Section" id="Floating">
-                <h2>Floating </h2>
-                <p> Use <code>.btn-floating</code>class to make a circle button. </p>
-                <p>
-                    <strong>To make it works properly you have to put an icon inside.</strong> The text will not fit in.
+            <section class="Section" id="Animated">
+                <h2>Animated </h2>
+                <p> Add <code>.Badge_*</code> class to <code>.Badge</code> Element to animate with these animations
+                    <span>:</span>
+                    <code>.animate_bounce</code>
+                    <code>.animate_flash</code>
+                    <code>.animate_pulse</code>
+                    <code>.animate_rubberBand</code>
+                    <code>.animate_shakeX</code>
+                    <code>.animate_shakeY</code>
+                    <code>.animate_headShake</code>
+                    <code>.animate_ripple</code> .
                 </p>
                 <div class="Example_section">
                     <div class="Example">
-                        <button class="btn  btn-primary btn-sm btn-circle">
-                            <i class="fab fa-linkedin-in"></i>
-                        </button>
-                        <button class="btn  btn-warning btn-h2  btn-circle">
-                            <i class="fas fa-angle-right"></i>
-                        </button>
-                        <button class="btn  btn-outline-dark btn-lg btn-circle">
-                            <i class="far fa-star"></i>
-                        </button>
-                        <button class="btn  btn-success btn-h3 btn-circle">
-                            <i class="fab fa-google"></i>
-                        </button>
+                        <span class="m-2 Badge Badge_primary animate_bounce"> Bouncing </span>
+                        <span class="m-2 Badge Badge_primary animate_flash"> Flash </span>
+                        <span class="m-2 Badge Badge_primary animate_pulse"> Pulse </span>
+                        <span class="m-2 Badge Badge_primary animate_rubberBand"> RubberBand </span>
+                        <span class="m-2 Badge Badge_primary animate_shakeX"> ShakeX </span>
+                        <span class="m-2 Badge Badge_primary animate_shakeY"> ShakeY </span>
+                        <span class="m-2 Badge Badge_primary animate_headShake"> HeadShake </span>
+                        <span class="m-2 Badge Badge_primary animate_ripple"> Ripple </span>
                     </div>
                     <div class="CodeBlock">
                         <div class="CodeBlock_Header">
@@ -415,70 +453,17 @@
                         </div>
                         <div class="CodeBlock_Body" id="Code_7">
                             <pre>
-												<code class="language-html  line-numbers">
-                                    &lt;button class=&quot;btn  btn-primary btn-sm btn-circle&quot;&gt;&lt;i class=&quot;fab fa-linkedin-in&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-                                    &lt;button class=&quot;btn  btn-warning btn-h2  btn-circle&quot;&gt;&lt;i class=&quot;fas fa-angle-right&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-                                    &lt;button class=&quot;btn  btn-outline-dark btn-lg btn-circle&quot;&gt;&lt;i class=&quot;far fa-star&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-                                    &lt;button class=&quot;btn  btn-success btn-h3 btn-circle&quot;&gt;&lt;i class=&quot;fab fa-google&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-                          </code>
-											</pre>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="Section" id="Sizes">
-                <h2>Sizes </h2>
-                <p> Fancy larger or smaller buttons? Add <code> .btn-lg</code> or <code>.btn-sm</code> for additional
-                    sizes. </p>
-                <div class="Example_section">
-                    <div class="Example">
-                        <button class="btn  btn-primary btn-sm">Small</button>
-                        <button class="btn  btn-primary">Normal</button>
-                        <button class="btn  btn-primary btn-lg ">Large</button>
-                    </div>
-                    <div class="CodeBlock">
-                        <div class="CodeBlock_Header">
-                            <button class="btn btn-primary btn-h3" data-collapse-toggle="#Code_8">
-                                <i class="fas fa-code"></i> Show Code </button>
-                            <a class="btn btn-info btn-h3">Codepen <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                        <div class="CodeBlock_Body" id="Code_8">
-                            <pre>
-												<code class="language-html  line-numbers">
-                                    &lt;button class=&quot;btn  btn-primary btn-sm&quot;&gt;Small&lt;/button&gt;
-                                    &lt;button class=&quot;btn  btn-primary&quot;&gt;Normal&lt;/button&gt;
-                                    &lt;button class=&quot;btn  btn-primary btn-lg&quot;&gt;Large&lt;/button&gt;
-                             </code>
-											</pre>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="Section" id="Block_buttons">
-                <h2>Block buttons </h2>
-                <p> Create responsive stacks of full-width with a mix of our display and gap utilities. </p>
-                <div class="Example_section">
-                    <div class="Example">
-                        <div class="mx-auto" style="max-width:500px ;">
-                            <button class=" btn  btn-primary btn-block">Block Level Button</button>
-                            <button class=" btn  btn-primary btn-h2 btn-block">Block Level Button</button>
-                        </div>
-                    </div>
-                    <div class="CodeBlock">
-                        <div class="CodeBlock_Header">
-                            <button class="btn btn-primary btn-h3" data-collapse-toggle="#Code_9">
-                                <i class="fas fa-code"></i> Show Code </button>
-                            <a class="btn btn-info btn-h3">Codepen <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                        <div class="CodeBlock_Body" id="Code_9">
-                            <pre>
-												<code class="language-html  line-numbers">
-                                    &lt;button class=&quot;btn  btn-primary btn-block&quot;&gt;Block Level Button&lt;/button&gt;
-
-                             </code>
-											</pre>
+								<code class="language-html  line-numbers">
+                                                            &lt;span class=&quot;m-2 Badge Badge_primary animate_bounce&quot;&gt; Bouncing &lt;/span&gt;
+                                                            &lt;span class=&quot;m-2 Badge Badge_primary animate_flash&quot;&gt; Flash &lt;/span&gt;
+                                                            &lt;span class=&quot;m-2 Badge Badge_primary animate_pulse&quot;&gt; Pulse &lt;/span&gt;
+                                                            &lt;span class=&quot;m-2 Badge Badge_primary animate_rubberBand&quot;&gt; RubberBand &lt;/span&gt;
+                                                            &lt;span class=&quot;m-2 Badge Badge_primary animate_shakeX&quot;&gt; ShakeX &lt;/span&gt;
+                                                            &lt;span class=&quot;m-2 Badge Badge_primary animate_shakeY&quot;&gt; ShakeY &lt;/span&gt;
+                                                            &lt;span class=&quot;m-2 Badge Badge_primary animate_headShake&quot;&gt; HeadShake &lt;/span&gt;
+                                                            &lt;span class=&quot;m-2 Badge Badge_primary animate_ripple&quot;&gt; Ripple &lt;/span&gt;
+                               </code>
+						   </pre>
                         </div>
                     </div>
                 </div>

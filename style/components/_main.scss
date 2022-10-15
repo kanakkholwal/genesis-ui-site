@@ -9,17 +9,16 @@ $stickyHeight:3.125rem;
     margin-bottom: $stickyHeight;
 
     &.Sticky {
-        position: sticky;
-        top: $stickyHeight;
 
         .G_SectionTitle {
             position: sticky;
             top: $stickyHeight;
         }
     }
-    @media screen and (max-width: variables.$sm){
+
+    @media screen and (max-width: variables.$sm) {
         padding: 0;
-        
+
     }
 }
 
@@ -29,6 +28,7 @@ $stickyHeight:3.125rem;
     padding: 0.5rem;
     margin-left: 1rem;
     margin-bottom: 1rem;
+
     @media screen and (max-width: variables.$sm) {
         margin-left: 0;
 

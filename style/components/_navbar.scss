@@ -1,67 +1,55 @@
 @use "../variables";
 $sidenavBreakPoint :variables.$sidenavBreakPoint;
 
-.G_Body {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: flex-start;
-    height: 100%;
+.G_BodyContent {
+
+
+    position: relative;
     width: 100%;
+    transition: all .8s ease-in-out;
+    padding: 0;
+    padding-left: variables.$sidenavWidth;
 
-    &>.G_BodyContent {
-        display: unset;
-        flex-direction: unset;
-        align-items: unset;
-        position: relative;
-        width: 100%;
-        transition: all .8s ease-in-out;
-        padding: 0;
-        padding-left: variables.$sidenavWidth;
+    @media screen and (max-width: $sidenavBreakPoint) {
 
-        @media screen and (max-width: $sidenavBreakPoint) {
-            padding-left: 0;
-
-        }
+        padding-left: 0;
 
     }
 
-    .G_sidenav {
 
-        @media screen and (min-width: $sidenavBreakPoint) {
+
+}
+
+.G_sidenav {
+
+    @media screen and (min-width: $sidenavBreakPoint) {
+        transform: translateX(0) !important;
+        max-width: 25%;
+
+
+        &.isOpen {
             transform: translateX(0) !important;
-            max-width: 25%;
 
-
-            &.isOpen {
-                transform: translateX(0) !important;
-
-            }
-        }
-    }
-
-    .G_Footer {
-        position: fixed !important;
-        bottom: 0;
-
-       
-
-    }
-
-    & .navToggle {
-        @include variables.Block;
-        background: none;
-        margin-bottom: -5px;
-        margin-right: 0.5rem;
-        color: variables.$muted;
-        font-size: 1rem;
-        cursor: pointer;
-
-        @media screen and (min-width: $sidenavBreakPoint) {
-            display: none;
         }
     }
 }
+
+
+
+.navToggle {
+    @include variables.Block;
+    background: none;
+    margin-bottom: -5px;
+    margin-right: 0.5rem;
+    color: variables.$muted;
+    font-size: 1rem;
+    cursor: pointer;
+
+    @media screen and (min-width: $sidenavBreakPoint) {
+        display: none;
+    }
+}
+
 
 .G_Sidenav {
     width: variables.$sidenavWidth;
@@ -86,7 +74,7 @@ $sidenavBreakPoint :variables.$sidenavBreakPoint;
     overflow-x: hidden;
     overflow-anchor: none;
     touch-action: auto;
-    z-index: 999;
+    z-index: 1001;
 
 
 
@@ -245,6 +233,7 @@ $sidenavBreakPoint :variables.$sidenavBreakPoint;
                 z-index: -1;
                 max-height: variables.$sidenavWidth;
                 margin-left: 0.75rem;
+                margin-bottom: 0.5rem;
                 border-left: 2px solid variables.$borderColor;
                 transition: height .5s ease;
                 padding-top: 0.1rem;
@@ -364,9 +353,7 @@ $sidenavBreakPoint :variables.$sidenavBreakPoint;
     width: -webkit-fill-available !important;
     max-width: 100%;
 
-    @media screen and (min-width: $sidenavBreakPoint) {
-        width: calc(100% - variables.$sidenavWidth);
-    }
+
 
     .Start {
         @include variables.left;

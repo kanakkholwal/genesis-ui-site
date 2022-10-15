@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion | Docs - Genesis UI</title>
+    <link href="/genesis-ui.css" rel="stylesheet" />
+    <link href="/content/fonts/all.min.css" rel="stylesheet" />
+    <link href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
+    <link href="/docs/genesis-ui_docs.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="G_Sidenav" id="sidenav">
+        <a class="SidenavHeader" href="/">
+            <span class="Gradient"> Genesis UI </span>
+        </a>
+        <div class="SidenavBody">
+            <ul>
+                <li>
+                    <a href="/get-started/">Get Started</a>
+                </li>
+                <li class="SidenavCollapse">
+                    <button class="collapseToggle">Components</button>
+                    <ul class="collapseList">
+                        <li>
+                            <a href="/docs/components/buttons/">Buttons</a>
+                        </li>
+                        <li>
+                            <a href="/docs/components/badge/">Badges</a>
+                        </li>
+                        <li>
+                            <a href="/docs/components/accordion/">Accordion</a>
+                        </li>
+                        <li>
+                            <a href="/docs/components/cards/">Card</a>
+                        </li>
+                        <li>
+                            <a href="/docs/components/collapse/">Collapse</a>
+                        </li>
+                        <li>
+                            <a href="/docs/components/modals/">Modals</a>
+                        </li>
+                        <li>
+                            <a href="/docs/components/toast/">Toasts</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="SidenavCollapse">
+                    <button class="collapseToggle">Navigation</button>
+                    <ul class="collapseList">
+                        <li>
+                            <a href="/docs/navigation/sliced-menu/">Sliced Menu</a>
+                        </li>
+                        <li>
+                            <a href="/docs/navigation/tabs-and-pills">Tabs & Pills</a>
+                        </li>
+                        <li>
+                            <a href="/docs/navigation/navbar">Navbar</a>
+                        </li>
+                        <li>
+                            <a href="/docs/navigation/breadcrumb">Breadcrumbs</a>
+                        </li>
+                        <li>
+                            <a href="/docs/navigation/footer">Footer</a>
+                        </li>
+                        <li>
+                            <a href="/docs/navigation/sidenav">Sidenav</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="SidenavCollapse">
+                    <button class="collapseToggle">Forms</button>
+                    <ul class="collapseList">
+                        <li>
+                            <a href="/docs/forms/input-fields/">Input Field</a>
+                        </li>
+                        <li>
+                            <a href="/docs/forms/range/">Range</a>
+                        </li>
+                        <li>
+                            <a href="/docs/forms/select/">Select</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="SidenavCollapse">
+                    <button class="collapseToggle">Method & API</button>
+                    <ul class="collapseList">
+                        <li>
+                            <a href="/docs/api/clipboard/">Clipboard</a>
+                        </li>
+                        <li>
+                            <a href="/docs/api/ripple/">Ripple</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="SidenavFooter">
+            <div class="social">
+                <a href="https://www.instagram.com/kanakkholwal/" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-instagram">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://github.com/kkupgrader" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-github">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://codepen.io/kkupgrader/" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-codepen">
+                        <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                        <line x1="12" y1="22" x2="12" y2="15.5"></line>
+                        <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+                        <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+                        <line x1="12" y1="2" x2="12" y2="8.5"></line>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/kanak-kholwal/" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-linkedin">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="G_BodyContent">
+        <nav class="G_Navbar">
+            <div class="Start">
+                <button class="navToggle" data-sidenav-toggle="#sidenav">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="/" class="NavBrand">Genesis UI</a>
+            </div>
+            <div class="End">
+                <a href="/docs/" class="NavLink">Docs</a>
+                <a href="https://github.com/kkupgrader" class="NavLink" target="_blank">Author</a>
+                <a href="https://github.com/KKUPGRADER/genesis-ui" class="NavLink">Github</a>
+            </div>
+        </nav>
+        <header class="G_Header">
+            <h1 class="title"> Accordion </h1>
+            <h5 class="description"> Accordion is a vertically collapsing element to show and hide content via class
+                changes. </h5>
+        </header>
+        <main class="G_MainContent" id="demo">
+            <section class="Section" id="Basic_example">
+                <h2>Basic example </h2>
+                <p> Click the accordions below to expand/collapse the accordion content. </p>
+                <div class="Example_section">
+                    <div class="Example">
+                        <div class="G_Accordion">
+                            <div class="G_Accordion_Item">
+                                <div class="G_Accordion_Header"> Accordion Header 1 </div>
+                                <div class="G_Accordion_Body">
+                                    <div class="G_Accordion_Body-content">
+                                        <strong>This is the first item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.G_Accordion_Body-content</code>, though the
+                                        transition does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="G_Accordion_Item">
+                                <div class="G_Accordion_Header"> Accordion Header 2 </div>
+                                <div class="G_Accordion_Body">
+                                    <div class="G_Accordion_Body-content">
+                                        <strong>This is the second item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.G_Accordion_Body-content</code>, though the
+                                        transition does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="G_Accordion_Item">
+                                <div class="G_Accordion_Header"> Accordion Header 3 </div>
+                                <div class="G_Accordion_Body">
+                                    <div class="G_Accordion_Body-content">
+                                        <strong>This is the third item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.G_Accordion_Body-content</code>, though the
+                                        transition does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="CodeBlock">
+                        <div class="CodeBlock_Header">
+                            <button class="btn btn-primary btn-h3" data-collapse-toggle="#Code_1">
+                                <i class="fas fa-code"></i> Show Code </button>
+                            <a class="btn btn-info btn-h3">Codepen <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="CodeBlock_Body" id="Code_1">
+                            <pre>
+												<code class="language-html  line-numbers">
+                                    &lt;div class=&quot;G_Accordion&quot;&gt;
+                                    &lt;div class=&quot;G_Accordion_Item&quot;&gt;
+                                        &lt;div class=&quot;G_Accordion_Header&quot;&gt;
+                                            Accordion Header 1
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;G_Accordion_Body&quot;&gt;
+                                            &lt;div class=&quot;G_Accordion_Body-content&quot;&gt;
+                                                Accordion Body 1  
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;G_Accordion_Item&quot;&gt;
+                                        &lt;div class=&quot;G_Accordion_Header&quot;&gt;
+                                            Accordion Header 2
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;G_Accordion_Body&quot;&gt;
+                                            &lt;div class=&quot;G_Accordion_Body-content&quot;&gt;
+                                                Accordion Body 2
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;G_Accordion_Item&quot;&gt;
+                                        &lt;div class=&quot;G_Accordion_Header&quot;&gt;
+                                            Accordion Header 3
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;G_Accordion_Body&quot;&gt;
+                                            &lt;div class=&quot;G_Accordion_Body-content&quot;&gt;
+                                                  Accordion Body 3  
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                          </code>
+											</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="Section" id="openMultiple">
+                <h2>Open Multiple Items </h2>
+                <p> just add <code>accordion-multiple="true"</code> attribute to parent element with
+                    <code>.G_Accordion</code> class to enable multiple accordion to open at a time . </p>
+                <div class="Example_section">
+                    <div class="Example">
+                        <div class="G_Accordion" accordion-multiple="true">
+                            <div class="G_Accordion_Item">
+                                <div class="G_Accordion_Header"> Accordion Header 1 </div>
+                                <div class="G_Accordion_Body">
+                                    <div class="G_Accordion_Body-content">
+                                        <br> Accordion Body 1 <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="G_Accordion_Item">
+                                <div class="G_Accordion_Header"> Accordion Header 2 </div>
+                                <div class="G_Accordion_Body">
+                                    <div class="G_Accordion_Body-content">
+                                        <br> Accordion Body 2 <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="G_Accordion_Item">
+                                <div class="G_Accordion_Header"> Accordion Header 3 </div>
+                                <div class="G_Accordion_Body">
+                                    <div class="G_Accordion_Body-content">
+                                        <br> Accordion Body 3 <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="CodeBlock">
+                        <div class="CodeBlock_Header">
+                            <button class="btn btn-primary btn-h3" data-collapse-toggle="#Code_2">
+                                <i class="fas fa-code"></i> Show Code </button>
+                            <a class="btn btn-info btn-h3">Codepen <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="CodeBlock_Body" id="Code_2">
+                            <pre>
+																					<code class="language-html  line-numbers">
+                                    &lt;div class=&quot;G_Accordion&quot; accordion-multiple=&quot;true&quot;&gt;
+                                    &lt;div class=&quot;G_Accordion_Item&quot;&gt;
+                                        &lt;div class=&quot;G_Accordion_Header&quot;&gt;
+                                            Accordion Header 1
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;G_Accordion_Body&quot;&gt;
+                                            &lt;div class=&quot;G_Accordion_Body-content&quot;&gt;
+                                                Accordion Body 1  
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;G_Accordion_Item&quot;&gt;
+                                        &lt;div class=&quot;G_Accordion_Header&quot;&gt;
+                                            Accordion Header 2
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;G_Accordion_Body&quot;&gt;
+                                            &lt;div class=&quot;G_Accordion_Body-content&quot;&gt;                                                
+                                                Accordion Body 2                                                                                                 
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;G_Accordion_Item&quot;&gt;
+                                        &lt;div class=&quot;G_Accordion_Header&quot;&gt;
+                                            Accordion Header 3
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;G_Accordion_Body&quot;&gt;
+                                            &lt;div class=&quot;G_Accordion_Body-content&quot;&gt;
+                                                  Accordion Body 3                                                   
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+    
+                                &lt;/div&gt;
+                          </code>
+																				</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="G_Footer">
+            <div class="Footer-section">
+                <h2 class="heading">Popular Tools</h2>
+                <ul class="Footer-links">
+                    <li>
+                        <a href="/getting-started/" class="Footer-link">Get Started</a>
+                    </li>
+                    <li>
+                        <a href="/docs/" class="Footer-link">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="/" class="Footer-link">See Demo</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-section">
+                <h2 class="heading">Useful Tools </h2>
+                <ul class="Footer-links">
+                    <li>
+                        <a href="https://kkupgrader.eu.org/tools/pro-meta-tag-generator/" class="Footer-link">Meta Tag
+                            Generator</a>
+                    </li>
+                    <li>
+                        <a href="https://kkupgrader.eu.org/tools/svg-to-css-generator/" class="Footer-link">SVG to CSS
+                            Convertor</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-section">
+                <h2 class="heading">Our Website </h2>
+                <ul class="Footer-links">
+                    <li>
+                        <a href="https://kkupgrader.eu.org/" class="Footer-link">K K UPGRADER</a>
+                    </li>
+                    <li>
+                        <a href="https://kkupgrader.blogspot.com/" class="Footer-link">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Social">
+                <div class="Heading">Follow Us on Social Media</div>
+                <a href="https://www.instagram.com/kanakkholwal/" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-instagram">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://github.com/kkupgrader" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-github">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://codepen.io/kkupgrader/" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-codepen">
+                        <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                        <line x1="12" y1="22" x2="12" y2="15.5"></line>
+                        <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+                        <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+                        <line x1="12" y1="2" x2="12" y2="8.5"></line>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/kanak-kholwal/" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-linkedin">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <footer>
+            <div class="copyright">Designed and Coded by <a href="https://kkupgrader.eu.org" title="K K UPGRADER"
+                    class="title">K K UPGRADER</a>
+            </div>
+        </footer>
+    </div>
+    <script src="/genesis-ui.js"></script>
+    <script src="/content/plugins/prism.js"></script>
+    <script src="/docs/genesis-ui_docs.js"></script>
+</body>
+
+</html>

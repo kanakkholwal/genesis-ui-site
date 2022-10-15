@@ -5,14 +5,22 @@ $lg:992px;
 $xl:1200px;
 $xxl:1400px;
 
-$fontNavbar:'DM Sans', sans-serif;
-$fontLogo:'Inter', sans-serif;
-$fontSidenav:'Inter', sans-serif;
-$fontBody:'Public Sans', sans-serif;
-$fontButton:'Roboto', sans-serif;
-$fontHeading:'Public Sans', sans-serif;
-$fontPara:'Sofia Pro', sans-serif;
-$fontCode:'Google Sans Mono',monospace;
+$fontNavbar:'DM Sans',
+sans-serif;
+$fontLogo:'Inter',
+sans-serif;
+$fontSidenav:'Inter',
+sans-serif;
+$fontBody:'Public Sans',
+sans-serif;
+$fontButton:'Roboto',
+sans-serif;
+$fontHeading:'Public Sans',
+sans-serif;
+$fontPara:'Sofia Pro',
+sans-serif;
+$fontCode:'Google Sans Mono',
+monospace;
 
 $primary:#85ceff;
 $primaryBg:#0d3b4e;
@@ -72,6 +80,10 @@ $buttonFontFamily:"Roboto",
 sans-serif;
 $bodyBg:#23272f;
 $bodyText:#f6f7f9;
+$bodyDarkBg:#1b1f29;
+
+$TextMuted:#ebecf0bf;
+$cardBg:#1b1f29;
 
 $FormBg:#23272f;
 $FormHoverBg:#404652;
@@ -131,16 +143,17 @@ $FormShadow:2px 2px 13px 5px #090c1040;
 }
 
 @mixin overFlowY {
-    
-        overflow-y: auto;
-   
-        &::-webkit-scrollbar-track {
-            background-color: none;
-            background-clip: content-box;
 
-        }
+    overflow-y: auto;
+
+    &::-webkit-scrollbar-track {
+        background-color: none;
+        background-clip: content-box;
+
+    }
+
     &::-webkit-scrollbar-thumb {
-        background-color: transparent 
+        background-color: transparent
     }
 
     &:hover {
@@ -153,6 +166,11 @@ $FormShadow:2px 2px 13px 5px #090c1040;
 
 }
 
+@mixin PrimaryTextColor {
+    background: linear-gradient(to right, #3282B8, #0059B2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #0000;
+}
 
 $MarginPadding1 :0.25rem;
 $MarginPadding2 :0.5rem;

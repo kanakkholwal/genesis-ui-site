@@ -1,4 +1,4 @@
-const RippleClass = ".ripple,.btn,.G_Accordion_Header";
+const RippleClass = ".ripple,.btn";
 const RippleInterval = 700; // in ms
 const CollapseAttribute = "data-collapse-toggle";
 const SidenavAttribute = "data-sidenav-toggle";
@@ -109,15 +109,16 @@ function GCollapse(collapse) {
 document.querySelectorAll(RippleClass).forEach((el) => {
     if (!el.classList.contains("ripple")) el.classList.add("ripple");
     el.addEventListener("click", (e) => {
-        var RippleElement = document.createElement("div");
+        const RippleElement = document.createElement("div");
         RippleElement.className = "ripple-effect";
-        if (e.target.hasAttribute("data-ripple-color") && e.target.getAttribute("data-ripple-color").length > 0)
-            RippleElement.style.setProperty("--ripple-background", e.target.getAttribute("data-ripple-color"));
+        if (el.hasAttribute("data-ripple-color") && el.getAttribute("data-ripple-color").length > 0)
+            RippleElement.style.setProperty("--ripple-background", el.getAttribute("data-ripple-color"));
 
-        e.target.appendChild(RippleElement);
+        el.appendChild(RippleElement);
         e = e.touches ? e.touches[0] : e;
         const r = el.getBoundingClientRect(),
             d = Math.sqrt(Math.pow(r.width, 2) + Math.pow(r.height, 2)) * 2;
+
         RippleElement.style.cssText = `--s: 0; --o: 1;`;
         RippleElement.offsetTop;
         RippleElement.style.cssText = `--t: 1; --o: 0; --d: ${d}; --x:${e.clientX - r.left
@@ -133,7 +134,7 @@ document.querySelectorAll(`[${CollapseAttribute}]`).forEach((toggler) => {
     if (!target.classList.contains('G_Collapse'))
         target.classList.add('G_Collapse');
 
-    toggler.addEventListener("click", () => GCollapse(document.querySelector(toggler.getAttribute(CollapseAttribute))));
+    toggler.addEventListener("click", () => GCollapse(target), (toggler.classList.contains('btn') && toggler.classList.toggle(activeClass)));
 });
 
 document.querySelectorAll(`[${SidenavAttribute}]`).forEach((toggler) => {
@@ -151,16 +152,15 @@ Array.from(document.getElementsByClassName(SidenavClass)).forEach((sidenav) => {
 document.querySelectorAll(SidenavCollapse.Element).forEach((Collapse) => {
     Collapse.querySelector(SidenavCollapse.Toggle).insertAdjacentHTML('beforeend', ArrowHTML);
     Collapse.querySelector(SidenavCollapse.Toggle).addEventListener("click", () => {
-
         Collapse.querySelector(SidenavCollapse.Toggle).classList.toggle(activeClass);
-        GCollapse(Collapse.querySelector(SidenavCollapse.List))
-
+        GCollapse(Collapse.querySelector(SidenavCollapse.List));
     });
 });
 
 
 document.querySelectorAll(AccordionSettings.className).forEach((Accordion) => {
     Accordion.querySelectorAll(AccordionSettings.item).forEach((item) => {
+
         item.querySelector(AccordionSettings.header).addEventListener("click", () => {
             if (Accordion.hasAttribute("accordion-multiple") && Accordion.getAttribute("accordion-multiple") === "true") {
                 item.classList.toggle(openClass);

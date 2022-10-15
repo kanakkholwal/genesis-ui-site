@@ -22,23 +22,85 @@
 
 // Text Alignment
 .text-center {
-    text-align: center;
+    text-align: center !important;
 }
 
 .text-start {
-    text-align: left;
+    text-align: left !important;
 }
 
 .text-end {
-    text-align: right;
+    text-align: right !important;
 }
 
 .text-justify {
-    text-align: justify;
+    text-align: justify !important;
 }
 
+// text Hierarchy
+.text-muted {
+    color: variables.$TextMuted !important;
+}
 
 // Badge
+.btn:not(.Badge_positioned)>.Badge {
+    margin-inline: 0.5rem;
+}
+
+.Badge_positioned:has(>.Badge) {
+    position: relative;
+
+    &>.Badge {
+        position: absolute !important;
+        --displace: 0.65em;
+
+        &.TopLeft {
+            top: calc(var(--displace)*-1) !important;
+            left: calc(var(--displace)*-1) !important;
+
+        }
+
+        &.TopCenter {
+            top: calc(var(--displace)*-1) !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+        }
+
+        &.TopRight {
+            top: calc(var(--displace)*-1) !important;
+            right: calc(var(--displace)*-1) !important;
+        }
+
+        &.BottomLeft {
+            bottom: calc(var(--displace)*-1) !important;
+            left: calc(var(--displace)*-1) !important;
+        }
+
+        &.BottomCenter {
+            bottom: calc(var(--displace)*-1) !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+        }
+
+        &.BottomRight {
+            bottom: calc(var(--displace)*-1) !important;
+            right: calc(var(--displace)*-1) !important;
+        }
+
+        &.LeftCenter {
+            top: 50% !important;
+            left: calc(var(--displace)*-1) !important;
+            transform: translateY(-50%) !important;
+        }
+
+        &.RightCenter {
+            top: 50% !important;
+            right: calc(var(--displace)*-1) !important;
+            transform: translateY(-50%) !important;
+        }
+    }
+}
+
 .Badge {
     border-radius: 0.27rem;
     display: inline-block;
@@ -101,6 +163,9 @@
         color: variables.$light;
     }
 
+    &.pilled {
+        border-radius: 50rem !important;
+    }
 
     @keyframes bounce {
 
@@ -142,7 +207,7 @@
         }
     }
 
-    &.animate__bounce {
+    &.animate_bounce {
         -webkit-animation-name: bounce;
         animation-name: bounce;
         -webkit-transform-origin: center bottom;
@@ -165,7 +230,7 @@
         }
     }
 
-    &.animate__flash {
+    &.animate_flash {
         -webkit-animation-name: flash;
         animation-name: flash;
         animation-timing-function: variables.$transition;
@@ -189,7 +254,7 @@
         }
     }
 
-    &.animate__pulse {
+    &.animate_pulse {
         -webkit-animation-name: pulse;
         animation-name: pulse;
         -webkit-animation-timing-function: ease-in-out;
@@ -234,7 +299,7 @@
         }
     }
 
-    &.animate__rubberBand {
+    &.animate_rubberBand {
         -webkit-animation-name: rubberBand;
         animation-name: rubberBand;
         animation-timing-function: variables.$transition;
@@ -267,7 +332,7 @@
         }
     }
 
-    &.animate__shakeX {
+    &.animate_shakeX {
         -webkit-animation-name: shakeX;
         animation-name: shakeX;
         animation-timing-function: variables.$transition;
@@ -301,7 +366,7 @@
         }
     }
 
-    &.animate__shakeY {
+    &.animate_shakeY {
         -webkit-animation-name: shakeY;
         animation-name: shakeY;
         animation-timing-function: variables.$transition;
@@ -340,7 +405,7 @@
         }
     }
 
-    &.animate__headShake {
+    &.animate_headShake {
         -webkit-animation-timing-function: ease-in-out;
         animation-timing-function: ease-in-out;
         -webkit-animation-name: headShake;
@@ -348,7 +413,7 @@
         animation-duration: 1.1s;
     }
 
-    &.animate__ripple {
+    &.animate_ripple {
         animation-timing-function: variables.$transition;
         animation-duration: 1.25s;
         animation-name: ripplePulse;
@@ -420,6 +485,7 @@
         // background: linear-gradient(to right, variables.$danger-hvr, variables.$danger);
         background: variables.$dangerBg;
         color: variables.$danger;
+
         &:before {
             background-color: variables.$danger;
         }
@@ -429,6 +495,7 @@
         // background: linear-gradient(to right, variables.$warning-hvr, variables.$warning);
         background: variables.$warningBg;
         color: variables.$warning;
+
         &:before {
             background-color: variables.$warning;
         }
@@ -438,6 +505,7 @@
         // background: linear-gradient(to right, variables.$success-hvr, variables.$success);
         background: variables.$successBg;
         color: variables.$success;
+
         &:before {
             background-color: variables.$success;
         }
@@ -448,6 +516,7 @@
         // background-color: variables.$dark3 !important;
         background: variables.$darkBg;
         color: variables.$dark;
+
         &:before {
             background-color: variables.$dark;
         }
@@ -458,15 +527,18 @@
         // background-color: variables.$info-hvr !important;
         background: variables.$infoBg;
         color: variables.$info;
+
         &:before {
             background-color: variables.$info;
         }
     }
+
     &.Note_light {
         // background: linear-gradient(to right, rgba(variables.$info-hvr, 0.4), rgba(variables.$info, 0.8));
         // background-color: variables.$info-hvr !important;
         background: variables.$lightBg;
         color: variables.$light;
+
         &:before {
             background-color: variables.$light;
         }

@@ -1,512 +1,545 @@
 <!DOCTYPE html>
-<html data-theme='light'>
+<html lang="en">
 
 <head>
-    <title>Cards - Genesis Documentation</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <!-- Preload Cdns -->
-    <link href='https://fonts.googleapis.com' rel='preconnect' />
-    <link crossorigin='' href='https://fonts.gstatic.com' rel='preconnect' />
-    <link href='//cdn.jsdelivr.net' rel='preconnect' />
-    <link href='//raw.githack.com' rel='dns-prefetch' />
-    <link href='//ajax.googleapis.com' rel='dns-prefetch' />
-    <link href='//cdn.jsdelivr.net' rel='dns-prefetch' />
-    <link href='//cdnjs.cloudflare.com' rel='dns-prefetch' />
-    <link href='//kkupgrader.eu.org/' rel='dns-prefetch' />
-
-    <!-- Preload Cdns -->
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-    <!-- Chrome, Firefox OS and Opera -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <!-- Windows Phone -->
-    <meta content='' name='msapplication-navbutton-color' />
-    <link href='/favicon.ico' rel='icon' type='image/x-icon' />
-    <link href='https://kkupgrader.eu.org/' rel='canonical' />
-    <link href="/assets/fonts/Roboto.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards | Docs - Genesis UI</title>
+    <link href="/genesis-ui.css" rel="stylesheet" />
+    <link href="/content/fonts/all.min.css" rel="stylesheet" />
     <link href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css" rel="stylesheet" />
-    <link href="/genesis-ui/main.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/genesis-ui/docs/docs.css" />
-    <meta name="google-site-verification" content="rVibt1gq3CQhtLXV1g8OlFugmOr9lipCo_fM0oh2KBU" />
-    <meta name="purpleads-verification" content="38e41f0efd80d3a6a1dff2da" />
-
-    <!-- <script async="async" defer="defer" src="/assets/js/jquery/3.6.0/jquery.min.js"></script> -->
-    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6988693445063744" crossorigin="anonymous"></script> -->
+    <link href="/docs/genesis-ui_docs.css" rel="stylesheet" />
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg  fixed-top">
-            <div class="container-fluid flex-nowrap">
-                <div class="d-flex align-items-center justify-content-center">
-                    <div class="nav-btn sidenav-toggler"><i class="fas fa-bars"></i></div>
-                    <a class="navbar-brand home me-2 mb-1 d-flex align-items-center" href="/genesis-ui/">
-                        <img src="/logo.svg" height="50" alt="K K UPGRADER" loading="lazy" style="margin-top: -5px" class="only-light" />
-                        <img src="/logo_dark.svg" height="50" alt="K K UPGRADER" loading="lazy" style="margin-top: -5px" class="only-dark" />
-                    </a>
-                </div>
-
-                <ul class="float-end navbar-nav d-flex flex-row align-items-center">
-
-                    <li class="nav-item me-2">
-                        <div class="nav-btn search-toggler" data-mdb-toggle="modal" data-mdb-target="#searchify"><i class="fas fa-search"></i></div>
-                    </li>
-                    <li class="nav-item me-2">
-                        <div class="nav-btn darkmode-toggler"><i class="far fa-moon"></i></div>
-                    </li>
-
-                    <li class="nav-item dropdown me-3 me-lg-1">
-                        <a class="nav-link dropdown-toggle hidden-arrow" href="#" id="more-info" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                            <div class="nav-btn"><i class="fas fa-ellipsis-v"></i>
-                                <!-- <img src="/content/images/person.svg"> -->
+    <div class="G_Sidenav" id="sidenav">
+        <a class="SidenavHeader" href="/">
+            <span class="Gradient"> Genesis UI </span>
+        </a>
+        <div class="SidenavBody">
+            <ul>
+                <li>
+                    <a href="/get-started/">Get Started</a>
+                </li>
+                <li class="SidenavCollapse">
+                    <button class="collapseToggle">Components</button>
+                    <ul class="collapseList">
+                        <li>
+                            <a href="/docs/components/buttons/">Buttons</a>
+                        </li>
+                        <li>
+                            <a href="/docs/components/badge/">Badges</a>
+                        </li>
+                        <li>
+                            <a href="/docs/components/accordion/">Accordion</a>
+                        </li>
+                        <li>
+                            <a href="/docs/components/cards/">Card</a>
+                        </li>
+                        <li>
+                            <a href="/docs/components/collapse/">Collapse</a>
+                        </li>
+                        <li>
+                            <a href="/docs/components/modals/">Modals</a>
+                        </li>
+                        <li>
+                            <a href="/docs/components/toast/">Toasts</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="SidenavCollapse">
+                    <button class="collapseToggle">Navigation</button>
+                    <ul class="collapseList">
+                        <li>
+                            <a href="/docs/navigation/sliced-menu/">Sliced Menu</a>
+                        </li>
+                        <li>
+                            <a href="/docs/navigation/tabs-and-pills">Tabs & Pills</a>
+                        </li>
+                        <li>
+                            <a href="/docs/navigation/navbar">Navbar</a>
+                        </li>
+                        <li>
+                            <a href="/docs/navigation/breadcrumb">Breadcrumbs</a>
+                        </li>
+                        <li>
+                            <a href="/docs/navigation/footer">Footer</a>
+                        </li>
+                        <li>
+                            <a href="/docs/navigation/sidenav">Sidenav</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="SidenavCollapse">
+                    <button class="collapseToggle">Forms</button>
+                    <ul class="collapseList">
+                        <li>
+                            <a href="/docs/forms/input-fields/">Input Field</a>
+                        </li>
+                        <li>
+                            <a href="/docs/forms/range/">Range</a>
+                        </li>
+                        <li>
+                            <a href="/docs/forms/select/">Select</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="SidenavCollapse">
+                    <button class="collapseToggle">Method & API</button>
+                    <ul class="collapseList">
+                        <li>
+                            <a href="/docs/api/clipboard/">Clipboard</a>
+                        </li>
+                        <li>
+                            <a href="/docs/api/ripple/">Ripple</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="SidenavFooter">
+            <div class="social">
+                <a href="https://www.instagram.com/kanakkholwal/" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-instagram">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://github.com/kkupgrader" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-github">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://codepen.io/kkupgrader/" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-codepen">
+                        <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                        <line x1="12" y1="22" x2="12" y2="15.5"></line>
+                        <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+                        <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+                        <line x1="12" y1="2" x2="12" y2="8.5"></line>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/kanak-kholwal/" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-linkedin">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="G_BodyContent">
+        <nav class="G_Navbar">
+            <div class="Start">
+                <button class="navToggle" data-sidenav-toggle="#sidenav">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="/" class="NavBrand">Genesis UI</a>
+            </div>
+            <div class="End">
+                <a href="/docs/" class="NavLink">Docs</a>
+                <a href="https://github.com/kkupgrader" class="NavLink" target="_blank">Author</a>
+                <a href="https://github.com/KKUPGRADER/genesis-ui" class="NavLink">Github</a>
+            </div>
+        </nav>
+        <header class="G_Header">
+            <h1 class="title"> Cards </h1>
+            <h5> Card is a responsive content container with an extensible option for headers, footers, images, and a
+                wide variety of content. </h5>
+        </header>
+        <main class="G_MainContent" id="demo">
+            <section class="Section" id="Basic_examples">
+                <h2 class="mb-4">Basic examples </h2>
+                <h3> Simple </h3>
+                <p>Use the following simple card component with a title and a description: </p>
+                <div class="Example_section">
+                    <div class="Example">
+                        <div class="G_Card">
+                            <div class="G_Card-body">
+                                <h5 class="G_Card-title">Card title</h5>
+                                <h6 class="G_Card-subtitle">Card subtitle</h6>
+                                <p class="G_Card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p>
+                                <button type="button" class="btn btn-primary">Button</button>
                             </div>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="more-info">
-                            <li>
-                                <a class="dropdown-item" aria-current="page" href="https://kkupgrader.blogspot.com/" target="_blank">Blogger Blog</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" aria-current="page" href="/tools/">Tools</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" aria-current="page" href="/portfolio/">PortFolio</a>
-                            </li>
-                        </ul>
+                        </div>
+                    </div>
+                    <div class="CodeBlock">
+                        <div class="CodeBlock_Header">
+                            <button class="btn btn-primary btn-h3" data-collapse-toggle="#Code_1">
+                                <i class="fas fa-code"></i> Show Code </button>
+                            <a class="btn btn-info btn-h3">Codepen <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="CodeBlock_Body" id="Code_1">
+                            <pre>
+												<code class="language-html  line-numbers">
+                                &lt;div class=&quot;G_Card&quot;&gt;
+                                &lt;div class=&quot;G_Card-body&quot;&gt;
+                                   &lt;h5 class=&quot;G_Card-title&quot;&gt;Card title&lt;/h5&gt;
+                                   &lt;h6 class=&quot;G_Card-subtitle&quot;&gt;Card subtitle&lt;/h6&gt;
+                                   &lt;p class=&quot;G_Card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&#039;s content.&lt;/p&gt;
+                                 &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Button&lt;/button&gt;
+                              &lt;/div&gt;
+                             &lt;/div&gt;
+                          </code>
+											</pre>
+                        </div>
+                    </div>
+                </div>
+                <h3> Image </h3>
+                <p>Use the following example of a card element with an image for blog posts, user cards, and many more:
+                </p>
+                <div class="Example_section">
+                    <div class="Example">
+                        <div class="G_Card">
+                            <img src="/content/images/184.webp" class="G_Card-ImgTop" alt="Fissure in Sandstone" />
+                            <div class="G_Card-body">
+                                <h5 class="G_Card-title">Card title</h5>
+                                <h6 class="G_Card-subtitle">Card subtitle</h6>
+                                <p class="G_Card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p>
+                                <button type="button" class="btn btn-primary">Button</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="CodeBlock">
+                        <div class="CodeBlock_Header">
+                            <button class="btn btn-primary btn-h3" data-collapse-toggle="#Code_2">
+                                <i class="fas fa-code"></i> Show Code </button>
+                            <a class="btn btn-info btn-h3">Codepen <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="CodeBlock_Body" id="Code_2">
+                            <pre>
+												<code class="language-html  line-numbers">
+                                &lt;div class=&quot;G_Card&quot;&gt;
+                                &lt;img src=&quot;your-image.webp&quot; class=&quot;G_Card-ImgTop&quot; alt=&quot;Fissure in Sandstone&quot; /&gt;
+                                &lt;div class=&quot;G_Card-body&quot;&gt;
+                                   &lt;h5 class=&quot;G_Card-title&quot;&gt;Card title&lt;/h5&gt;
+                                   &lt;h6 class=&quot;G_Card-subtitle&quot;&gt;Card subtitle&lt;/h6&gt;
+                                   &lt;p class=&quot;G_Card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&#039;s content.&lt;/p&gt;
+                                 &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Button&lt;/button&gt;
+                              &lt;/div&gt;
+                             &lt;/div&gt;
+                          </code>
+											</pre>
+                        </div>
+                    </div>
+                </div>
+                <h3> Image with ripple </h3>
+                <p>To add a <code>.ripple</code> to add ripple effect on click. </p>
+                <div class="Example_section">
+                    <div class="Example">
+                        <div class="G_Card">
+                            <div class="bgImage hoverOverlay ripple">
+                                <img src="/content/images/111.webp" class="Img-Fluid" alt="Beach Image " />
+                                <a href="#!">
+                                    <div class="Mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                            </div>
+                            <div class="G_Card-body">
+                                <h5 class="G_Card-title">Card title</h5>
+                                <h6 class="G_Card-subtitle">Card subtitle</h6>
+                                <p class="G_Card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p>
+                                <button type="button" class="btn btn-primary">Button</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="CodeBlock">
+                        <div class="CodeBlock_Header">
+                            <button class="btn btn-primary btn-h3" data-collapse-toggle="#Code_3">
+                                <i class="fas fa-code"></i> Show Code </button>
+                            <a class="btn btn-info btn-h3">Codepen <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="CodeBlock_Body" id="Code_3">
+                            <pre>
+												<code class="language-html  line-numbers">
+                                &lt;div class=&quot;G_Card&quot;&gt;
+                                &lt;div class=&quot;bgImage hoverOverlay ripple&quot;&gt;
+                                    &lt;img src=&quot;your-image.webp&quot; class=&quot;Img-Fluid&quot; alt=&quot;Beach Image &quot; /&gt;
+                                    &lt;a href=&quot;#!&quot;&gt;
+                                        &lt;div class=&quot;Mask&quot; style=&quot;background-color: rgba(251, 251, 251, 0.15);&quot;&gt;&lt;/div&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;G_Card-body&quot;&gt;
+                                &lt;h5 class=&quot;G_Card-title&quot;&gt;Card title&lt;/h5&gt;
+                                &lt;h6 class=&quot;G_Card-subtitle&quot;&gt;Card subtitle&lt;/h6&gt;
+                                &lt;p class=&quot;G_Card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&#039;s content.&lt;/p&gt;
+                              &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Button&lt;/button&gt;
+                           &lt;/div&gt;
+                          &lt;/div&gt;
+                          </code>
+											</pre>
+                        </div>
+                    </div>
+                </div>
+                <h3> Header and footer </h3>
+                <p>Add optional header and footer sections to the card. </p>
+                <div class="Example_section">
+                    <div class="Example">
+                        <div class="G_Card text-center">
+                            <div class="G_Card-header">Featured</div>
+                            <div class="G_Card-body">
+                                <h5 class="G_Card-title">Special title treatment</h5>
+                                <p class="G_Card-text">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Button</a>
+                            </div>
+                            <div class="G_Card-footer text-muted">2 days ago</div>
+                        </div>
+                    </div>
+                    <div class="CodeBlock">
+                        <div class="CodeBlock_Header">
+                            <button class="btn btn-primary btn-h3" data-collapse-toggle="#Code_4">
+                                <i class="fas fa-code"></i> Show Code </button>
+                            <a class="btn btn-info btn-h3">Codepen <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="CodeBlock_Body" id="Code_4">
+                            <pre>
+												<code class="language-html  line-numbers">
+                                &lt;div class=&quot;G_Card text-center&quot;&gt;
+                            &lt;div class=&quot;G_Card-header&quot;&gt;Featured&lt;/div&gt;
+                            &lt;div class=&quot;G_Card-body&quot;&gt;
+                                &lt;h5 class=&quot;G_Card-title&quot;&gt;Special title treatment&lt;/h5&gt;
+                                &lt;p class=&quot;G_Card-text&quot;&gt;With supporting text below as a natural lead-in to additional
+                                    content.&lt;/p&gt;
+                                &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Button&lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;G_Card-footer text-muted&quot;&gt;2 days ago&lt;/div&gt;
+                        &lt;/div&gt;
+                          </code>
+											</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="Section" id="Content_types">
+                <h2 class="mb-4">Content types </h2>
+                <p>Cards support a wide variety of content, including images, text, list groups, links, and more. Below
+                    are examples of what’s supported. </p>
+                <h3>Body</h3>
+                <p> The building block of a card is the <code>.G_Card-body</code>. Use it whenever you need a padded
+                    section within a card. </p>
+                <div class="Example_section">
+                    <div class="Example">
+                        <div class="G_Card">
+                            <div class="G_Card-body">This is some text within a card body.</div>
+                        </div>
+                    </div>
+                    <div class="CodeBlock">
+                        <div class="CodeBlock_Header">
+                            <button class="btn btn-primary btn-h3" data-collapse-toggle="#Code_5">
+                                <i class="fas fa-code"></i> Show Code </button>
+                            <a class="btn btn-info btn-h3">Codepen <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="CodeBlock_Body" id="Code_5">
+                            <pre>
+												<code class="language-html  line-numbers">
+                                &lt;div class=&quot;G_Card&quot;&gt;
+                                &lt;div class=&quot;G_Card-body&quot;&gt;This is some text within a card body.&lt;/div&gt;
+                            &lt;/div&gt;
+                          </code>
+											</pre>
+                        </div>
+                    </div>
+                </div>
+                <h3>Titles, text, and links</h3>
+                <p> Card titles are used by adding <code>.G_Card-title</code> to a <code>&lt;h*&gt;</code> tag. In the
+                    same way, links are added and placed next to each other by adding <code>.G_Card-link</code> to an
+                    <code>&lt;a&gt;</code> tag. </p>
+                <p> Subtitles are used by adding a <code>.G_Card-subtitle</code> to a <code>&lt;h*&gt;</code> tag. If
+                    the <code>.G_Card-title</code> and the <code>.G_Card-subtitle</code> items are placed in a
+                    <code>.G_Card-body</code> item, the card title and subtitle are aligned nicely. </p>
+                <div class="Example_section">
+                    <div class="Example">
+                        <div class="G_Card">
+                            <div class="G_Card-body">
+                                <h5 class="G_Card-title">Card title</h5>
+                                <h6 class="G_Card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                <p class="G_Card-text"> Some quick example text to build on the card title and make up
+                                    the bulk of the card's content. </p>
+                                <a href="#" class="G_Card-link">card link</a>
+                                <a href="#" class="G_Card-link">Another link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="CodeBlock">
+                        <div class="CodeBlock_Header">
+                            <button class="btn btn-primary btn-h3" data-collapse-toggle="#Code_6">
+                                <i class="fas fa-code"></i> Show Code </button>
+                            <a class="btn btn-info btn-h3">Codepen <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="CodeBlock_Body" id="Code_6">
+                            <pre>
+												<code class="language-html  line-numbers">
+                                &lt;div class=&quot;G_Card&quot;&gt;
+                                &lt;div class=&quot;G_Card-body&quot;&gt;
+                                    &lt;h5 class=&quot;G_Card-title&quot;&gt;Card title&lt;/h5&gt;
+                                    &lt;h6 class=&quot;G_Card-subtitle mb-2 text-muted&quot;&gt;Card subtitle&lt;/h6&gt;
+                                    &lt;p class=&quot;G_Card-text&quot;&gt;
+                                        Some quick example text to build on the card title and make up the bulk of the card&#039;s content.
+                                    &lt;/p&gt;
+                                    &lt;a href=&quot;#&quot; class=&quot;G_Card-link&quot;&gt;card link&lt;/a&gt;
+                                    &lt;a href=&quot;#&quot; class=&quot;G_Card-link&quot;&gt;Another link&lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                          </code>
+											</pre>
+                        </div>
+                    </div>
+                </div>
+                <h3>Images</h3>
+                <p>
+                    <code>.G_Card-ImgTop</code> places an image to the top of the card. With <code>.G_Card-text</code>,
+                    text can be added to the card. Text within <code>.G_Card-text</code> can also be styled with the
+                    standard HTML tags.
+                </p>
+                <div class="Example_section">
+                    <div class="Example">
+                        <div class="G_Card">
+                            <img src="/content/images/182.webp" class="G_Card-ImgTop" alt="Sunset Over the Sea">
+                            <div class="G_Card-body">
+                                <p class="G_Card-text"> Some quick example text to build on the card title and make up
+                                    the bulk of the card's content. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="CodeBlock">
+                        <div class="CodeBlock_Header">
+                            <button class="btn btn-primary btn-h3" data-collapse-toggle="#Code_7">
+                                <i class="fas fa-code"></i> Show Code </button>
+                            <a class="btn btn-info btn-h3">Codepen <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="CodeBlock_Body" id="Code_7">
+                            <pre>
+													<code class="language-html  line-numbers">
+                                &lt;div class=&quot;G_Card&quot; &gt;
+                                &lt;img src=&quot;/content/images/182.webp&quot; class=&quot;G_Card-ImgTop&quot; alt=&quot;Sunset Over the Sea&quot;&gt;
+                                &lt;div class=&quot;G_Card-body&quot;&gt;
+                                    &lt;p class=&quot;G_Card-text&quot;&gt;
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card&#039;s
+                                        content.
+                                    &lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                          </code>
+												</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="G_Footer">
+            <div class="Footer-section">
+                <h2 class="heading">Popular Tools</h2>
+                <ul class="Footer-links">
+                    <li>
+                        <a href="/getting-started/" class="Footer-link">Get Started</a>
+                    </li>
+                    <li>
+                        <a href="/docs/" class="Footer-link">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="/" class="Footer-link">See Demo</a>
                     </li>
                 </ul>
             </div>
-        </nav>
-
-        <main class="w-100 hero" style="margin-top: 65px">
-            <div class="container-fluid">
-                <!-- Section: Intro -->
-                <section class="m-auto py-5">
-                    <div class="row h-100 mt-5 justify-content-center align-items-center text-center text-white" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/WebSite">
-                        <h3 class="text-white" id="title">
-
-                        </h3>
-                        <p>
-                            Card is a responsive content container with an extensible option for headers, footers, images, and a wide variety of content.</p>
-                    </div>
-                </section>
+            <div class="Footer-section">
+                <h2 class="heading">Useful Tools </h2>
+                <ul class="Footer-links">
+                    <li>
+                        <a href="https://kkupgrader.eu.org/tools/pro-meta-tag-generator/" class="Footer-link">Meta Tag
+                            Generator</a>
+                    </li>
+                    <li>
+                        <a href="https://kkupgrader.eu.org/tools/svg-to-css-generator/" class="Footer-link">SVG to CSS
+                            Convertor</a>
+                    </li>
+                </ul>
             </div>
-
-        </main>
-
-        <!-- Navbar -->
-    </header>
-
-
-
-    <main class="container-lg my-5 px-2 px-md-5 " id="docs">
-        <section id="section-introduction">
-            <!-- Main title -->
-            <h2 class="h1 fw-bold">Cards
-
-            </h2>
-
-            <!-- Seo title -->
-            <h1 class="h6">Genesis Card component
-            </h1>
-
-            <!-- Description -->
-
-            <p class="my-4">Responsive cards built with the Genesis UI . Card is a responsive content container with an extensible option for headers, footers, images, and a wide variety of content.
-            </p>
-
-        </section>
-        <!--Section: Introduction-->
-
-        <hr class="my-5" />
-
-        <!--Section: Basic examples-->
-        <section id="section-basic-examples">
-            <!-- Section title -->
-            <h2 class="mb-4">Basic examples</h2>
-
-            <p></p>
-            <!--Subsection: Simple-->
-            <section id="subsection-simple">
-                <!--Subsection title-->
-                <h4 class="mt-5">Simple</h4>
-
-                <!--Description-->
-                <p>Use the following simple card component with a title and a description:</p>
-
-                <!--Section: Demo-->
-                <section class="pb-4">
-                    <div class="bg-white border rounded-5">
-
-                        <section class="p-4 d-flex justify-content-center w-100">
-                            <div class="g-card" style="max-width: 22rem;">
-                                <div class="g-card-body">
-                                    <h5 class="g-card-title">Card title</h5>
-                                    <p class="g-card-text">
-                                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                                    </p>
-                                    <button type="button" class="g-btn g-btn-primary">Button</button>
-                                </div>
-                            </div>
-                        </section>
-
-
-                        <div class="border-top p-3 text-center">
-                            <button class="btn btn-link" data-g-collapse-target="#simple-code"><i class="fas fa-code me-md-2"></i>Show Code</button>
-
-
-                        </div>
-                </section>
-                <div class="g-collapse" id="simple-code">
-                    <pre><code class="lang-html">
-                        &lt;div class=&quot;g-card&quot; style=&quot;max-width: 22rem;&quot;&gt;
-                        &lt;div class=&quot;g-card-body&quot;&gt;
-                            &lt;h5 class=&quot;g-card-title&quot;&gt;Card title&lt;/h5&gt;
-                            &lt;p class=&quot;g-card-text&quot;&gt;
-                                Some quick example text to build on the card title and make up the bulk of the card&#039;s content.
-                            &lt;/p&gt;
-                            &lt;button type=&quot;button&quot; class=&quot;g-btn g-btn-primary&quot;&gt;Button&lt;/button&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;                   </code></pre>
-                </div>
-            </section>
-        </section>
-        <section id="subsection-image">
-            <!--Subsection title-->
-            <h4 class="mt-5">Image</h4>
-
-            <!--Description-->
-            <p>Use the following example of a card element with an image for blog posts, user cards, and many more:</p>
-
-            <!--Section: Demo-->
-            <section class="pb-4">
-                <div class="bg-white border rounded-5">
-
-                    <section class="p-4 d-flex justify-content-center  w-100">
-                        <div class="g-card" style="max-width: 22rem;">
-                            <img src="/genesis-ui/content/images/184.webp" class="g-card-img-top" alt="Fissure in Sandstone" />
-                            <div class="g-card-body">
-                                <h5 class="g-card-title">Card title</h5>
-                                <p class="g-card-text">
-                                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                                </p>
-                                <a href="#!" class="g-btn">Button</a>
-                            </div>
-                        </div>
-                    </section>
-                    <div class="border-top p-3 text-center">
-                        <button class="btn btn-link" data-g-collapse-target="#imgT-code"><i class="fas fa-code me-md-2"></i>Show Code</button>
-
-
-                    </div>
-            </section>
-            <div class="g-collapse" id="imgT-code">
-                <pre><code class="lang-html">
-                    &lt;div class=&#34;g-card&#34;&gt;
-                    &lt;img src=&#34;https://kkupgrader.eu.org/genesis-ui/content/images/184.webp&#34; class=&#34;g-card-img-top&#34; alt=&#34;Fissure in Sandstone&#34;/&gt;
-                    &lt;div class=&#34;g-card-body&#34;&gt;
-                      &lt;h5 class=&#34;g-card-title&#34;&gt;Card title&lt;/h5&gt;
-                      &lt;p class=&#34;g-card-text&#34;&gt;Some quick example text to build on the card title and make up the bulk of the card&#39;s content.&lt;/p&gt;
-                      &lt;a href=&#34;#!&#34; class=&#34;g-btn &#34;&gt;Button&lt;/a&gt;
-                    &lt;/div&gt;
-                  &lt;/div&gt;                  </code></pre>
+            <div class="Footer-section">
+                <h2 class="heading">Our Website </h2>
+                <ul class="Footer-links">
+                    <li>
+                        <a href="https://kkupgrader.eu.org/" class="Footer-link">K K UPGRADER</a>
+                    </li>
+                    <li>
+                        <a href="https://kkupgrader.blogspot.com/" class="Footer-link">Blog</a>
+                    </li>
+                </ul>
             </div>
-        </section>
-        <section id="subsection-basic-examples-header-and-footer">
-            <!--Subsection title-->
-            <h4 class="mt-5">Header and footer</h4>
-
-            <!--Description-->
-            <p>Add optional header and footer sections to the card.</p>
-
-            <!--Section: Demo-->
-            <section class="pb-4">
-                <div class="bg-white border rounded-5">
-
-                    <section class="p-4 d-flex justify-content-center text-center w-100">
-                        <div class="g-card text-center" style="max-width: 22rem;">
-                            <div class="g-card-header">Featured</div>
-                            <div class="g-card-body">
-                                <h5 class="g-card-title">Special title treatment</h5>
-                                <p class="g-card-text">
-                                    With supporting text below as a natural lead-in to additional content.
-                                </p>
-                                <a href="#" class="g-btn g-btn-primary">Button</a>
-                            </div>
-                            <div class="g-card-footer text-muted">2 days ago</div>
-                        </div>
-                    </section>
-                    <div class="border-top p-3 text-center">
-                        <button class="btn btn-link" data-g-collapse-target="#ht-code"><i class="fas fa-code me-md-2"></i>Show Code</button>
-
-
-                    </div>
-            </section>
-            <div class="g-collapse" id="ht-code">
-                <pre><code class="lang-html">
-                    &lt;div class=&#34;g-card text-center&#34;&gt;
-                    &lt;div class=&#34;g-card-header&#34;&gt;Featured&lt;/div&gt;
-                    &lt;div class=&#34;g-card-body&#34;&gt;
-                      &lt;h5 class=&#34;g-card-title&#34;&gt;Special title treatment&lt;/h5&gt;
-                      &lt;p class=&#34;g-card-text&#34;&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
-                      &lt;a href=&#34;#&#34; class=&#34;g-btn g-btn-primary&#34;&gt;Button&lt;/a&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&#34;g-card-footer text-muted&#34;&gt;2 days ago&lt;/div&gt;
-                  &lt;/div&gt;
-                </code></pre>
+            <div class="Social">
+                <div class="Heading">Follow Us on Social Media</div>
+                <a href="https://www.instagram.com/kanakkholwal/" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-instagram">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://github.com/kkupgrader" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-github">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://codepen.io/kkupgrader/" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-codepen">
+                        <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                        <line x1="12" y1="22" x2="12" y2="15.5"></line>
+                        <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+                        <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+                        <line x1="12" y1="2" x2="12" y2="8.5"></line>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/kanak-kholwal/" target="_blank" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-linkedin">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
             </div>
-
-
-
-            </div>
-        </section>
-
-
-        </section>
-        <section id="subsection-titles-text-and-links">
-            <!--Subsection title-->
-            <h4 class="mt-5">Titles, text, and links</h4>
-
-            <!--Description-->
-            <p>
-                Card titles are used by adding <code>.card-title</code> to a <code>&lt;h*&gt;</code> tag. In the same way, links are added and placed next to each other by adding
-                <code>.card-link</code> to an <code>&lt;a&gt;</code> tag.
-            </p>
-
-            <p>
-                Subtitles are used by adding a <code>.card-subtitle</code> to a <code>&lt;h*&gt;</code> tag. If the <code>.card-title</code> and the <code>.card-subtitle</code> items are placed in a
-                <code>.card-body</code> item, the card title and subtitle are aligned nicely.
-            </p>
-
-            <!--Section: Demo-->
-            <section class="pb-4">
-                <div class="bg-white border rounded-5">
-
-                    <section class="p-4 d-flex justify-content-center w-100">
-                        <div class="g-card" style="width: 18rem;">
-                            <div class="g-card-body">
-                                <h5 class="g-card-title">Card title</h5>
-                                <h6 class="g-card-subtitle">Card subtitle</h6>
-                                <p class="g-card-text">
-                                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                                </p>
-                                <a href="#" class="g-card-link">Card link</a>
-                                <a href="#" class="g-card-link">Another link</a>
-                            </div>
-                        </div>
-                    </section>
-                    <div class="border-top p-3 text-center">
-                        <button class="btn btn-link" data-g-collapse-target="#imgLink-code"><i class="fas fa-code me-md-2"></i>Show Code</button>
-
-
-                    </div>
-            </section>
-            <div class="g-collapse" id="imgLink-code">
-                <pre><code class="lang-html">
-            
-                    &lt;div class=&#34;g-card&#34; style=&#34;width: 18rem;&#34;&gt;
-                    &lt;div class=&#34;g-card-body&#34;&gt;
-                      &lt;h5 class=&#34;g-card-title&#34;&gt;Card title&lt;/h5&gt;
-                      &lt;h6 class=&#34;g-card-subtitle&#34;&gt;Card subtitle&lt;/h6&gt;
-                      &lt;p class=&#34;g-card-text&#34;&gt;Some quick example text to build on the card title and make up the bulk of the card&#39;s content.&lt;/p&gt;
-                      &lt;a href=&#34;#&#34; class=&#34;g-card-link&#34;&gt;Card link&lt;/a&gt;
-                      &lt;a href=&#34;#&#34; class=&#34;g-card-link&#34;&gt;Another link&lt;/a&gt;
-                    &lt;/div&gt;
-                  &lt;/div&gt;
-                </code></pre>
-            </div>
-
-
-
-            </div>
-        </section>
-
-
-        </section>
-    </main>
-
-    <div class="mb-n3 pt-4 text-center text-white trans-bg">
-        <div class="container p-4 pb-0">
-            <!-- Section: Social media -->
-            <section class="mb-4">
-                <div class="d-flex justify-content-center pt-3">
-                    <a class="me-4 text-white" href="https://t.me/kkupgrader" target="_blank"><i
-                            class="fab fa-telegram-plane fa-lg"></i></a>
-                    <a class="text-white me-4" href="https://gitub.com/kkupgrader" role="button" target="_blank"><i class="fab fa-github fa-lg"></i></a>
-                    <a class="text-white me-4" href="https://Pinterest.com/kkupgrader" role="button" target="_blank"><i class="fab fa-pinterest fa-lg"></i></a>
-                    <a class="text-white me-4" href="https://codepen.io/kkupgrader" target="_blank"><i
-                            class="fab fa-codepen fa-lg"></i></a>
-                    <a class="text-white me-4" href="https://instagram.com/kk.upgrader" role="button" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
-                </div>
-            </section>
-            <!-- Section: Social media -->
         </div>
+        <footer>
+            <div class="copyright">Designed and Coded by <a href="https://kkupgrader.eu.org" title="K K UPGRADER"
+                    class="title">K K UPGRADER</a>
+            </div>
+        </footer>
     </div>
-
-    <div class="sidenav">
-        <div class="sidenav-header">
-            <div class="sidenav-title">
-                Genesis UI
-            </div>
-            <div class="sidenav-close">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
-        <div class="sidebar-body">
-            <div class="sidenav-heading">Installation</div>
-            <ul class="list">
-                <li><a href="">Installation</a></li>
-
-            </ul>
-            <div class="sidenav-heading">Documentation</div>
-            <ul class="list">
-                <li class="sidenavify-collapse ">
-                    <a class="ripple">
-                        <i class="fas fa-cubes"></i>Components
-                        <div class="nav-btn circle"><i class="fas fa-angle-up icon-status"></i></div>
-                    </a>
-                    <ul class="collapse-list">
-
-                        <li>
-                            <a href="/genesis-ui/docs/components/collapse/"> Collapse</a>
-                        </li>
-                        <li>
-                            <a href="/genesis-ui/docs/components/cards/">Cards</a>
-                        </li>
-                        <li>
-                            <a href="#">Some Link</a>
-                        </li>
-                        <li>
-                            <a href="#">Some Link</a>
-                        </li>
-                        <li>
-                            <a href="#">Some Link</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidenavify-collapse">
-                    <a>
-                        <i class="fas fa-th-large"></i>Layout
-                        <div class="nav-btn circle"><i class="fas fa-angle-up icon-status"></i></div>
-                    </a>
-                    <ul class="collapse-list">
-
-                        <li>
-                            <a href="/genesis-css/docs/components/collapse/"><i class="fas fa-cubes"></i> Collapse</a>
-                        </li>
-                        <li>
-                            <a href="#">Some Link</a>
-                        </li>
-                        <li>
-                            <a href="#">Some Link</a>
-                        </li>
-                        <li>
-                            <a href="#">Some Link</a>
-                        </li>
-                        <li>
-                            <a href="#">Some Link</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#"><i
-                            class="fas fa-star me-1"></i>Link One</a>
-                </li>
-                <li class="blank">
-                    <a href="#" target="_blank">Link Two</a>
-                </li>
-
-                <li>
-                    <a href="#">Link Three</a>
-                </li>
-
-                <div class="sidenav-heading">Normal List</div>
-
-
-                <li class="sidenavify-collapse">
-                    <a>
-                        <i class="fas fa-th-large"></i>Layout
-                        <div class="nav-btn circle"><i class="fas fa-angle-up icon-status"></i></div>
-                    </a>
-                    <ul class="collapse-list">
-
-                        <li>
-                            <a href="/genesis-css/docs/components/collapse/"><i class="fas fa-cubes"></i> Collapse</a>
-                        </li>
-                        <li>
-                            <a href="/genesis-ui/docs/components/cards/">Cards</a>
-                        </li>
-                        <li>
-                            <a href="#">Some Link</a>
-                        </li>
-                        <li>
-                            <a href="#">Some Link</a>
-                        </li>
-                        <li>
-                            <a href="#">Some Link</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-star me-1"></i>Link One</a>
-                </li>
-                <li>
-                    <a href="#" target="_blank">Link Two</a>
-                </li>
-
-                <li>
-                    <a href="#">Some Link</a>
-                </li>
-
-            </ul>
-            <div class="size" size="400px"></div>
-        </div>
-
-
-    </div>
-    <div class="modal fade" id="searchify" tabindex="-1" aria-labelledby="search" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="search">Search Modal</h5>
-                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-
-                    <img src="/content/images/load.svg" height="300" width="300" class="m-auto">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer class=" text-center text-lg-start mt-3">
-        <div class="text-center text-white bg-dark p-3">
-            Copyright &#169;
-            <a href="/" title="K K UPGRADER"><span title="K K UPGRADER">K K UPGRADER</span></a> - All Right Reserved
-        </div>
-    </footer>
-
-    <script src="/genesis-ui/main.js" type="text/javascript"></script>
-    <script src="/genesis-ui/docs/docs.js" type="text/javascript"></script>
-    <!-- Scripts -->
-    <script async="async" defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.js" type="text/javascript"></script>
+    <script src="/genesis-ui.js"></script>
+    <script src="/content/plugins/prism.js"></script>
+    <script src="/docs/genesis-ui_docs.js"></script>
 </body>
 
 </html>

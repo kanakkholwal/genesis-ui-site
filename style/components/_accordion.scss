@@ -2,7 +2,9 @@
 @use "./collapse";
 
 .G_Accordion {
-margin-block: 1rem;
+    margin-block: 1rem;
+    width: 100%;
+
     .G_Accordion_Item {
         border: 2px solid variables.$secondaryBg;
         color: variables.$secondary;
@@ -24,9 +26,9 @@ margin-block: 1rem;
             border-bottom-right-radius: 8px;
         }
 
-        &.isOpen {
-            background-color: variables.$darkBg;
-        }
+        // &.isOpen {
+        //     background-color: variables.$darkBg;
+        // }
 
         .G_Accordion_Header {
             position: relative;
@@ -59,17 +61,18 @@ margin-block: 1rem;
             }
 
             &::after {
-               
+
                 transform: rotate(90deg);
             }
 
-          
-            &.isActive{
-                
+
+            &.isActive {
+                background-color: variables.$darkBg;
+
                 &::before {
                     transform: rotate(90deg);
 
-                } 
+                }
             }
         }
 
@@ -81,6 +84,10 @@ margin-block: 1rem;
 
             &.isOpen {
                 border-top: 1px solid variables.$secondaryBg;
+            }
+
+            .G_Accordion_Body-content {
+                padding: 1.15rem 1.5rem;
             }
         }
 
