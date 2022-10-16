@@ -130,11 +130,21 @@ document.querySelectorAll(RippleClass).forEach((el) => {
 });
 
 document.querySelectorAll(`[${CollapseAttribute}]`).forEach((toggler) => {
-    const target = document.querySelector(toggler.getAttribute(CollapseAttribute));
-    if (!target.classList.contains('G_Collapse'))
-        target.classList.add('G_Collapse');
+    const target = document.querySelectorAll(toggler.getAttribute(CollapseAttribute));
+    target.forEach((each) => {
 
-    toggler.addEventListener("click", () => GCollapse(target), (toggler.classList.contains('btn') && toggler.classList.toggle(activeClass)));
+        if (!each.classList.contains('G_Collapse'))
+            each.classList.add('G_Collapse');
+    });
+
+    toggler.addEventListener("click", () => {
+        target.forEach((each) => {
+            GCollapse(each)
+
+        });
+
+        (toggler.classList.contains('btn') && toggler.classList.toggle(activeClass))
+    });
 });
 
 document.querySelectorAll(`[${SidenavAttribute}]`).forEach((toggler) => {

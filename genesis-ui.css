@@ -182,9 +182,54 @@ hr.hr2 {
   height: 2px;
 }
 
+main dl,
+main ol,
+main ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+main ol,
+main ul {
+  padding-left: 2rem;
+}
+main li {
+  line-height: 1.5em;
+  font-size: 1em;
+  list-style: circle;
+}
+
+ol > li {
+  counter-increment: ify;
+  list-style: none;
+}
+ol > li:before {
+  display: inline-block;
+  content: counters(ify, ".") ".";
+  margin: 0 5px 0 0;
+}
+ol.ol {
+  padding: 0;
+  list-style-type: none;
+}
+ol.ol > li {
+  counter-increment: step-counter;
+  margin-bottom: 10px;
+}
+
+ol.ol li::before {
+  content: counter(step-counter);
+  margin-right: 5px;
+  font-size: 80%;
+  background-color: rgb(0, 200, 200);
+  color: white;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
 :not(pre) > code:not([class]) {
   display: inline;
-  padding: 5px;
+  padding: 3px 5px;
   font-size: 0.875rem;
   border-radius: 3px;
   line-height: inherit;
@@ -5385,7 +5430,7 @@ span.inline-color {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: all 250ms ease;
+  transition: all 250ms ease-in-out;
   color: #89b5f3;
   opacity: 0.75;
   width: 100%;
@@ -5398,7 +5443,6 @@ span.inline-color {
 .G_Sidenav .SidenavBody a:hover,
 .G_Sidenav .SidenavBody .collapseToggle:hover {
   color: #85ceff;
-  background: rgba(17, 24, 39, 0.2);
   opacity: 1;
 }
 .G_Sidenav .SidenavBody a.isActive,
@@ -5436,6 +5480,7 @@ span.inline-color {
 }
 .G_Sidenav .SidenavBody .SidenavCollapse .collapseToggle.isActive {
   opacity: 1;
+  padding-left: 2rem;
 }
 .G_Sidenav .SidenavBody .SidenavCollapse .collapseToggle.isActive > .arrow {
   transform: rotate(180deg);

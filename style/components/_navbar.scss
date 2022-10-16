@@ -166,7 +166,7 @@ $sidenavBreakPoint :variables.$sidenavBreakPoint;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            transition: all 250ms ease;
+            transition: all 250ms ease-in-out;
             color: variables.$dark;
             opacity: 0.75;
             width: 100%;
@@ -178,8 +178,6 @@ $sidenavBreakPoint :variables.$sidenavBreakPoint;
 
             &:hover {
                 color: variables.$primary;
-                background: variables.$darkBg;
-
                 opacity: 1;
 
             }
@@ -217,6 +215,7 @@ $sidenavBreakPoint :variables.$sidenavBreakPoint;
 
                 &.isActive {
                     opacity: 1;
+                    padding-left: 2rem;
 
                     &>.arrow {
                         transform: rotate(180deg);

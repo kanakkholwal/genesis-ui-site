@@ -118,7 +118,7 @@ $FormShadow:2px 2px 13px 5px #090c1040;
 }
 
 @mixin inline-flex {
-    display: flex;
+    display: inline-flex;
 }
 
 @mixin left {
