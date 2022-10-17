@@ -232,13 +232,10 @@ main {
 
     dl,
     ol,
-    ul {
+    ul:not([class]):has(>li:not([class])) {
         margin-top: 0;
         margin-bottom: 1rem;
-    }
 
-    ol,
-    ul {
         padding-left: 2rem;
     }
 

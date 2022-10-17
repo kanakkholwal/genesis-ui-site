@@ -3,10 +3,10 @@
 :root {
     --text-light: #8a8f98;
     --text-lighter: #757783;
-    --bodyBg:#23272f;
+    --bodyBg: #23272f;
 }
 
-@import "./style/reset", "./style/buttons", "./style/flex", "./style/forms", "./style/layout","./style/position",  "./style/topography", "./style/code", "./style/ripple";
+@import "./style/reset", "./style/buttons", "./style/flex", "./style/forms", "./style/layout", "./style/position", "./style/topography", "./style/code", "./style/ripple";
 
 @import "./style/components/navbar";
 @import "./style/components/header";

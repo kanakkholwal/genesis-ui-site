@@ -1,7 +1,7 @@
 :root {
   --text-light: #8a8f98;
   --text-lighter: #757783;
-  --bodyBg:#23272f;
+  --bodyBg: #23272f;
 }
 
 html,
@@ -184,12 +184,9 @@ hr.hr2 {
 
 main dl,
 main ol,
-main ul {
+main ul:not([class]):has(> li:not([class])) {
   margin-top: 0;
   margin-bottom: 1rem;
-}
-main ol,
-main ul {
   padding-left: 2rem;
 }
 main li {
