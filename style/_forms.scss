@@ -87,6 +87,17 @@
     }
   }
 
+  &:not(:placeholder-shown) {
+
+
+
+    &~.G_Form-label {
+      z-index: 2;
+      color: variables.$FormActive;
+      transform: translateY(-1.5rem);
+    }
+  }
+
 
 }
 
@@ -105,11 +116,22 @@
   }
 
   &:focus {
-    border-color: variables.$FormActive;
 
     &::placeholder {
       visibility: visible;
     }
+
+    &~.G_Form-label {
+      z-index: 2;
+
+      color: variables.$FormActive;
+      transform: translateY(-0.75rem);
+    }
+  }
+
+  &:not(:placeholder-shown) {
+    border-color: variables.$FormActive;
+
 
     &~.G_Form-label {
       z-index: 2;

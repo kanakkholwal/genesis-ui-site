@@ -1409,6 +1409,12 @@ html ::-webkit-scrollbar-track {
   color: #6658d3;
   transform: translateY(-1.5rem);
 }
+.G_Form-element.Form_Underlined .G_Form-input:not(:placeholder-shown) ~ .G_Form-label,
+.G_Form-element.Form_Underlined .G_Form-textarea:not(:placeholder-shown) ~ .G_Form-label {
+  z-index: 2;
+  color: #6658d3;
+  transform: translateY(-1.5rem);
+}
 .G_Form-element.Form_Floating {
   position: relative;
 }
@@ -1436,16 +1442,22 @@ html ::-webkit-scrollbar-track {
   visibility: hidden;
   transition: all 0.25 ease;
 }
-.G_Form-element.Form_Floating .G_Form-input:focus,
-.G_Form-element.Form_Floating .G_Form-textarea:focus {
-  border-color: #6658d3;
-}
 .G_Form-element.Form_Floating .G_Form-input:focus::placeholder,
 .G_Form-element.Form_Floating .G_Form-textarea:focus::placeholder {
   visibility: visible;
 }
 .G_Form-element.Form_Floating .G_Form-input:focus ~ .G_Form-label,
 .G_Form-element.Form_Floating .G_Form-textarea:focus ~ .G_Form-label {
+  z-index: 2;
+  color: #6658d3;
+  transform: translateY(-0.75rem);
+}
+.G_Form-element.Form_Floating .G_Form-input:not(:placeholder-shown),
+.G_Form-element.Form_Floating .G_Form-textarea:not(:placeholder-shown) {
+  border-color: #6658d3;
+}
+.G_Form-element.Form_Floating .G_Form-input:not(:placeholder-shown) ~ .G_Form-label,
+.G_Form-element.Form_Floating .G_Form-textarea:not(:placeholder-shown) ~ .G_Form-label {
   z-index: 2;
   color: #6658d3;
   transform: translateY(-0.75rem);
