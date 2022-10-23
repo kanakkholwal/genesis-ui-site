@@ -1316,7 +1316,7 @@ html ::-webkit-scrollbar-track {
   left: 0.25rem;
   z-index: 0;
   background-color: #23272f;
-  transform: translateY(0.75rem);
+  transform: translateY(0.5rem);
   padding-inline: 0.5rem;
   transition: 0.25s ease;
 }
@@ -1342,7 +1342,7 @@ html ::-webkit-scrollbar-track {
 .G_Form-element.Form_Floating .G_Form-textarea:focus ~ .G_Form-label {
   z-index: 2;
   color: #6658d3;
-  transform: translateY(-0.75rem);
+  transform: translateY(-0.5rem);
 }
 .G_Form-element.Form_Floating .G_Form-input:not(:placeholder-shown),
 .G_Form-element.Form_Floating .G_Form-textarea:not(:placeholder-shown) {
@@ -1352,7 +1352,7 @@ html ::-webkit-scrollbar-track {
 .G_Form-element.Form_Floating .G_Form-textarea:not(:placeholder-shown) ~ .G_Form-label {
   z-index: 2;
   color: #6658d3;
-  transform: translateY(-0.75rem);
+  transform: translateY(-0.5rem);
 }
 
 .G_Form-input {
@@ -1363,7 +1363,7 @@ html ::-webkit-scrollbar-track {
   font-weight: 600;
   transition: all 0.2s linear;
   border-radius: 0.25rem;
-  padding: calc(0.75rem + 1px) calc(0.5rem + 1px);
+  padding: calc(0.33rem + 1px) calc(0.75rem + 1px);
   border: 2px solid #374151;
   background: #23272f;
   color: rgba(255, 255, 255, 0.7490196078);
@@ -1395,6 +1395,19 @@ html ::-webkit-scrollbar-track {
   animation-duration: 500ms;
   animation-fill-mode: both;
 }
+.G_Form-input.Form-lg {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border-radius: 0.25rem;
+}
+.G_Form-input.Form-sm {
+  padding: 0.43em 0.99em 0.35em;
+  font-size: 0.775rem;
+  line-height: 1.6;
+  border-radius: 0.2rem;
+}
 
 .G_Form-textarea {
   height: auto;
@@ -1408,7 +1421,7 @@ html ::-webkit-scrollbar-track {
   font-weight: 600;
   transition: all 0.2s linear;
   border-radius: 0.25rem;
-  padding: calc(0.75rem + 1px) calc(0.5rem + 1px);
+  padding: calc(0.33rem + 1px) calc(0.75rem + 1px);
   border: 2px solid #374151;
   background: #23272f;
   color: rgba(255, 255, 255, 0.7490196078);
@@ -1449,6 +1462,19 @@ html ::-webkit-scrollbar-track {
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation-duration: 500ms;
   animation-fill-mode: both;
+}
+.G_Form-textarea.Form-lg {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border-radius: 0.25rem;
+}
+.G_Form-textarea.Form-sm {
+  padding: 0.43em 0.99em 0.35em;
+  font-size: 0.775rem;
+  line-height: 1.6;
+  border-radius: 0.2rem;
 }
 
 .G_Form-label {
